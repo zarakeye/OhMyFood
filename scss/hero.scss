@@ -1,0 +1,25 @@
+.hero {
+  text-align: center;
+  font-family: 'Roboto';
+  padding-left: 34px;
+  padding-right: 34px;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .section-title {
+    height: 68px;
+    line-height: 28.13px;
+    margin-top: 39px;
+  }
+  &__text {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 21.09px;
+  }
+  &__button {
+    margin-top: 27px;
+    margin-bottom: 57px;
+  }
+}
