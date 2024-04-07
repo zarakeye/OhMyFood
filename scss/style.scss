@@ -1,0 +1,27 @@
+:root {
+  /* Fonts */
+  --font-title: 'Shrikhand';
+  --font-default: 'Roboto';
+  /* Fonts Sizes */
+  --section-title-font-size: 24px;
+  --card-title-font-size: 18px;
+
+  /* Fonts Weight */
+  --section-title-font-weight: 400;
+  --card-title-font-weight: 700;
+  /* Colors */
+  --artefact-color: #9356DC;
+  --artefact-color-2: #7E7E7E;
+  --secondary-color: #99E2D0;
+  --background-color: #f6f6f6;
+  --location-background-color: #EAEAEA;
+  --text-color: #000000;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: var(--background-color);
+}
