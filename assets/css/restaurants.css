@@ -1,20 +1,24 @@
-.restaurants {
-  margin-top: 54px;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 68px;
+/*** Screen size limits ***/
+#restaurants {
+  background-color: var(--background-color);
+  width: 100%;
+  padding-top: 54px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 68px;
 }
-.restaurants .section-title {
+#restaurants .section-title {
   height: 28px;
   margin-bottom: 20px;
 }
-.restaurants .like {
+#restaurants .like {
   background-color: white;
 }
-.restaurants .like__heart {
+#restaurants .like__heart {
   background-color: white;
 }
-.restaurants .fa-solid, .restaurants .fa-regular {
+#restaurants .fa-heart {
+  background-color: var(--light-theme-background-content-color);
   margin-top: 7px;
 }
 
@@ -26,7 +30,7 @@
 
 .card {
   position: relative;
-  width: calc(100vw - 40px);
+  height: 100%;
 }
 .card__img {
   height: 174px;
@@ -42,10 +46,13 @@
   padding-bottom: 12px;
   padding-left: 13px;
   padding-right: 25px;
-  justify-content: space-between;
-  font-family: "Roboto";
+  font-family: var(--font-default);
   color: black;
   border-radius: 0 0 15px 15px;
+}
+.card a {
+  width: calc(100% - 22px);
+  color: var(--light-theme-main-text-color);
 }
 .card__title {
   background-color: white;
@@ -69,8 +76,8 @@
   font-weight: 500;
   width: 80px;
   height: 29px;
-  color: var(--secondary-text-color);
-  background-color: var(--secondary-color);
+  color: var(--notication-text-color);
+  background-color: var(--notication-background-color);
   justify-content: center;
   align-items: center;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
@@ -78,4 +85,31 @@
 }
 .card__new--hidden {
   display: none;
+}
+
+@media (min-width: 767px) {
+  #restaurants {
+    padding-top: 30px;
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+  .cards {
+    width: calc(100vw - 180px);
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+@media (min-width: 1279px) {
+  #restaurants {
+    padding-top: 30px;
+    padding-left: 180px;
+    padding-right: 180px;
+  }
+  .cards {
+    width: calc(100vw - 360px);
+    grid-template-columns: 1fr 1fr;
+    -moz-column-gap: 100px;
+         column-gap: 100px;
+    row-gap: 50px;
+  }
 }/*# sourceMappingURL=restaurants.css.map */

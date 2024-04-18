@@ -1,8 +1,12 @@
-.restaurants {
-  margin-top: 54px;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 68px;
+@import "utilities/variables";
+
+#restaurants {
+  background-color: var(--background-color);
+  width: 100%;
+  padding-top: 54px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 68px;
   .section-title {
     height: 28px;
     margin-bottom: 20px;
@@ -13,10 +17,9 @@
       background-color: white;
     }
   }
-  .fa-solid, .fa-regular {
+  .fa-heart {  
+    background-color: var(--light-theme-background-content-color);
     margin-top: 7px;
-    // width: 100%;
-    // height: 100%;
   }
 }
 
@@ -28,7 +31,7 @@
 
 .card {
   position: relative;
-  width: calc(100vw - 40px);
+  height: 100%;
   &__img {
     height: 174px;
     width: 100%;
@@ -42,15 +45,20 @@
     padding-bottom: 12px;
     padding-left: 13px;
     padding-right: 25px;
-    justify-content: space-between;
-    font-family: 'Roboto';
+    // justify-content: ;
+    font-family: var(--font-default);
     color: black;
     border-radius: 0 0 15px 15px;
   }
-  // &__text {
+  & a {
+    width: calc(100% - 22px);
+    color: var(--light-theme-main-text-color);
+  }
+  //&__text {
   //   background-image: white;
   //   background-clip:content-box;
-  // }
+  //  width: calc(100% - 22px);
+  //}
   &__title {
     background-color: white;
     font-size: 18px;
@@ -73,8 +81,8 @@
     font-weight: 500;
     width: 80px;
     height: 29px;
-    color: var(--secondary-text-color);
-    background-color: var(--secondary-color);
+    color: var(--notication-text-color);
+    background-color: var(--notication-background-color);
     justify-content: center;
     align-items: center;
     box-shadow: 0px 2px 4px 0px #00000026;
@@ -82,5 +90,34 @@
     &--hidden {
       display: none;
     }
+  }
+}
+
+@media (min-width: $tablet-min-width) {
+  #restaurants {
+    padding-top: 30px;
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+  .cards {
+    width: calc(100vw - 180px);
+    grid-template-columns: 1fr 1fr;
+    // column-gap: 100px;
+    // row-gap: 50px;
+    gap: 30px;
+  }
+}
+
+@media (min-width: $desktop-min-width) {
+  #restaurants {
+    padding-top: 30px;
+    padding-left: 180px;
+    padding-right: 180px;
+  }
+  .cards {
+    width: calc(100vw - 360px);
+    grid-template-columns: 1fr 1fr;
+    column-gap: 100px;
+    row-gap: 50px;
   }
 }

@@ -1,0 +1,103 @@
+:root {
+  /* Fonts */
+  --font-title: 'Shrikhand';
+  --font-default: 'Roboto';
+
+  
+  /* Fonts Sizes */
+  --section-title-font-size: 24px;
+  --card-title-font-size: 18px;
+
+  /* Fonts Weight */
+  --section-title-font-weight: 400;
+  --card-title-font-weight: 700;
+
+  /* Colors */
+  --artefact-color: #9356DC;
+  --artefact-color-2: #7E7E7E;
+  --footer-color: #353535;
+  --notication-background-color: #99E2D0;
+  --notication-text-color: #008766;
+  --background-color: #f6f6f6;
+  --location-background-color: #EAEAEA;
+  --light-theme-background-content-color: #FFFFFF;
+  --light-theme-main-text-color: #000000;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: none;
+  text-decoration: none;
+  list-style: none;
+}
+
+.section-title {
+  font-family: var(--font-default);
+  font-size: var(--section-title-font-size);
+  font-weight: 700;
+}
+
+.cta {
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  font-size: 16px;
+  font-weight: 500;
+  font-family: var(--font-default);
+  text-align: center;
+  vertical-align: middle;
+  padding: 13px 18.75px;
+  height: 50px;
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+  opacity: 1;
+  transition: all 300ms linear;
+}
+.cta-txt {
+  background-color: transparent;
+  color: white;
+  display: inline-block;
+  width: 100%;
+}
+.cta:hover {
+  opacity: 0.7;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
+}
+
+.like-form {
+  background-color: var(--light-theme-background-content-color);
+  position: relative;
+  width: 22px;
+  height: 21px;
+}
+
+.like_button {
+  display: none;
+}
+.like_button:not(:checked) ~ .fav-label .fa-solid {
+  display: none;
+}
+.like_button:not(:checked) ~ .fav-label .fa-regular {
+  display: inline-block;
+}
+.like_button:checked ~ .fav-label .fa-solid {
+  display: inline-block;
+}
+.like_button:checked ~ .fav-label .fa-regular {
+  display: none;
+}
+
+.fa-heart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 23px;
+  height: 21px;
+  font-size: 22px;
+}
+.fa-heart.fa-solid {
+  background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}/*# sourceMappingURL=shared.css.map */

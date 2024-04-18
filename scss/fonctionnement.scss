@@ -1,3 +1,5 @@
+@import "utilities/variables";
+
 .fonctionnement {
   background-color: white;
   padding-top: 48px;
@@ -57,6 +59,7 @@
     justify-content: baseline;
     align-items: center;
     margin-left: 12.51px;
+    padding-right: 38px;
     border-radius: 20px;
     box-shadow: 0px 4px 15px 0px #00000026;
   }
@@ -76,5 +79,28 @@
   }
   .fa-store {
     color: var(--artefact-color);
+  }
+}
+
+@media (min-width: $tablet-min-width) {
+  .fonctionnement {
+    padding-left: 75px;
+    padding-right: 75px;
+    // &__steps {
+    //   flex-direction: row;
+    //   gap: 24px;
+    // }
+  }
+}
+
+@media (min-width: $desktop-min-width) {
+  .fonctionnement {
+    padding-left: 180px;
+    padding-right: 180px;
+    &__steps {
+      flex-direction: row;
+      justify-content: flex-start;
+      gap: 24px;
+    }
   }
 }

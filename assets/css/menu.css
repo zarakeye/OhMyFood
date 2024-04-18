@@ -1,29 +1,4 @@
-.img-wrapper img {
-  height: 275px;
-  width: 100vw;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.menu {
-  position: relative;
-  margin-top: -50px;
-  border-radius: 40px 40px 0 0;
-  background-color: #f6f6f6;
-}
-.menu__title {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  padding-top: 32px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-radius: 40px 40px 0 0;
-}
-.menu__title .section-title {
-  font-family: "Shrikhand";
-  font-size: 28px;
-  font-weight: 400;
-  font-style: italic;
-  height: 27px;
-}/*# sourceMappingURL=menu.css.map */
+@import url(/assets/css/shared.css);
+@import url(/assets/css/menu-card.css);
+@import url(/assets/css/header.css);
+@import url(/assets/css/footer.css);/*# sourceMappingURL=menu.css.map */

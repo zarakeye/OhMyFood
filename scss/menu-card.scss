@@ -1,0 +1,187 @@
+@import "utilities/variables";
+
+.img-wrapper {
+  img {
+    height: 275px;
+    width: 100vw;
+    object-fit: cover;
+  }
+}
+
+.menu {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: -50px;
+  border-radius: 40px 40px 0 0;
+  background-color: var(--background-color);
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-top: 32px;
+    padding-bottom: 40px;
+    padding-left: 17px;
+    padding-right: 17px;
+    border-radius: 40px 40px 0 0;
+    .section-title {
+      font-family: 'Shrikhand';
+      font-size: 28px;
+      font-weight: 400;
+      // font-style: italic; // Cette propriété semble ne pas être nécessaire pour être au plus proche du rendu de la maquette
+      height: 27px;
+      padding-bottom: 40px;
+    }
+    .fa-heart {
+      background-color: var(--background-color);
+    }
+  }
+}
+
+.step-of-meal {
+  padding-left: 13px;
+  padding-right: 13px;
+  background-color: var(--background-color);
+  padding-bottom: 40px;
+  .section-title {
+    margin-bottom: 12px;
+    &-text {
+    font-family: var(--font-default);
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+    height: 19px;
+    margin-bottom: 5px;
+    }
+    &-underline {
+      background-color: var(--notication-background-color);
+      bottom: 3px;
+      width: 40px;
+      height: 3px;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    font-family: var(--font-default);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .selector {
+    &:checked + .selector__label {
+      .dish__price, .dish__check  {
+        transform: translateX(0);
+      }
+    }
+    &__label {
+      display: flex;
+      justify-content: space-between;
+      overflow: hidden;
+      background-color: var(--background-color);
+      border-radius: 15px;
+      box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+      
+      .dish {
+        display: flex;
+        flex: 1;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 13.5px 15px;
+        &__section-title {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+          justify-content: space-between;
+        }
+        &__price {
+          font-weight: 700;
+          font-size: 15.04px;
+          margin-left: 5px;
+        }
+        &__check {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: $dish__check-width;
+          background-color: var(--notication-background-color);
+          & span {
+            background-color: var(--light-theme-background-content-color);
+            color: var(--notication-background-color);
+            text-align: center;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+          }
+        }
+        &__price, &__check {
+          transform: translateX($dish__check-width);
+          transition: transform 175ms linear;
+        }
+      }
+    }
+  }
+}
+
+.command {
+  background-color: var(--background-color);
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+@media (min-width: 370px) {
+  .selector__label {
+    height: 111px;
+  }
+}
+
+@media (min-width: 417px) {
+  .selector__label {
+    height: 92px;
+  }
+}
+
+@media (min-width: 434px) {
+  .selector__label {
+    height: 88px;
+  }
+}
+
+@media (min-width: $tablet-min-width) {
+  .menu {
+    background: var(--light-theme-background-content-color);
+    margin-left: 75px;
+    margin-right: 75px;
+    &__title {
+      background-color: var(--background-color);
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+      justify-content: center;
+      gap: 24px;
+    }
+  }
+  .selector__label {
+    height: 69px;
+  }
+
+  .step-of-meal {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+@media (min-width: $desktop-min-width) {
+  .menu {
+    background: var(--light-theme-background-content-color);
+    margin-left: 193px;
+    margin-right: 193px;
+  }
+
+  .step-of-meal {
+    padding-left: 210px;
+    padding-right: 210px;
+  }
+}
