@@ -1,7 +1,9 @@
+@import "utilities/variables";
+
 .header {
   position: relative;
   text-align: center;
-  background-color: white;
+  background-color: $light-theme-background-content-color;
   height: 63px;
   padding-top: 14px;
   box-sizing: border-box;
@@ -13,16 +15,16 @@
     height: 44px;
   }
   &__goback {
-    background-color: white;
+    background-color: $light-theme-background-content-color;
     position: absolute;
-    color: black;
+    color: $light-theme-main-text-color;
     width: 30px;
     height: 30px;
     left: 23px;
     top: 24px;
     z-index: 3;
     & img {
-      background-color: white;
+      background-color: $light-theme-background-content-color;
       width: 17.2px;
       height: 16px;
     }
@@ -34,7 +36,7 @@
     justify-content: center;
     height: 50px;
     align-items: center;
-    background-color: #EAEAEA;
+    background-color: $location-background-color;
     margin-bottom: 0px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .25);
     &__btn {
@@ -45,7 +47,7 @@
     }
     &__txt {
       background-color: transparent;
-      font-family: var(--font-default);
+      font-family: $font-default;
       font-size: 16px;
       font-weight: 500;
       height: 19px;
@@ -55,7 +57,7 @@
     &__icon {
       position: absolute;
       background-color: transparent;
-      color: black;
+      color: $light-theme-main-text-color;
       right: 0px;
       top: 0px;
       width: 12px;

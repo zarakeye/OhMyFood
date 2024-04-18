@@ -1,3 +1,166 @@
+/*** Screen size limits ***/
+/* Fonts */
+/* Fonts Sizes */
+/* Fonts Weight */
+/* Colors */
+/*** Screen size limits ***/
+/* Fonts */
+/* Fonts Sizes */
+/* Fonts Weight */
+/* Colors */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: none;
+  text-decoration: none;
+  list-style: none;
+}
+
+.section-title {
+  font-family: "Roboto";
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.cta {
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Roboto";
+  text-align: center;
+  vertical-align: middle;
+  padding: 13px 18.75px;
+  height: 50px;
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+  opacity: 1;
+  transition: all 300ms linear;
+}
+.cta-txt {
+  background-color: transparent;
+  color: #FFFFFF;
+  display: inline-block;
+  width: 100%;
+}
+.cta:hover {
+  opacity: 0.7;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
+}
+
+.like-form {
+  background-color: #FFFFFF;
+  position: relative;
+  width: 22px;
+  height: 21px;
+}
+
+.like_button {
+  display: none;
+}
+.like_button:not(:checked) ~ .fav-label .fa-solid {
+  display: none;
+}
+.like_button:not(:checked) ~ .fav-label .fa-regular {
+  display: inline-block;
+}
+.like_button:checked ~ .fav-label .fa-solid {
+  display: inline-block;
+}
+.like_button:checked ~ .fav-label .fa-regular {
+  display: none;
+}
+
+.fa-heart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 23px;
+  height: 21px;
+  font-size: 22px;
+}
+.fa-heart.fa-solid {
+  background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/*** Screen size limits ***/
+/* Fonts */
+/* Fonts Sizes */
+/* Fonts Weight */
+/* Colors */
+.header {
+  position: relative;
+  text-align: center;
+  background-color: #FFFFFF;
+  height: 63px;
+  padding-top: 14px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+  z-index: 2;
+}
+.header__logo {
+  background-color: transparent;
+  width: 162px;
+  height: 44px;
+}
+.header__goback {
+  background-color: #FFFFFF;
+  position: absolute;
+  color: #000000;
+  width: 30px;
+  height: 30px;
+  left: 23px;
+  top: 24px;
+  z-index: 3;
+}
+.header__goback img {
+  background-color: #FFFFFF;
+  width: 17.2px;
+  height: 16px;
+}
+.header__location {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  align-items: center;
+  background-color: #EAEAEA;
+  margin-bottom: 0px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.header__location__btn {
+  position: relative;
+  width: 12px;
+  height: 16px;
+  background-color: transparent;
+}
+.header__location__txt {
+  background-color: transparent;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 500;
+  height: 19px;
+  padding-left: 17px;
+}
+.header__location__icon {
+  position: absolute;
+  background-color: transparent;
+  color: #000000;
+  right: 0px;
+  top: 0px;
+  width: 12px;
+  height: 16px;
+}
+
+/*** Screen size limits ***/
+/* Fonts */
+/* Fonts Sizes */
+/* Fonts Weight */
+/* Colors */
 .img-wrapper img {
   height: 275px;
   width: 100vw;
@@ -7,6 +170,8 @@
 
 .menu {
   position: relative;
+  display: flex;
+  flex-direction: column;
   margin-top: -50px;
   border-radius: 40px 40px 0 0;
   background-color: #f6f6f6;
@@ -14,16 +179,235 @@
 .menu__title {
   display: flex;
   justify-content: space-between;
+  background-color: #f6f6f6;
   align-items: baseline;
   padding-top: 32px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-bottom: 40px;
+  padding-left: 17px;
+  padding-right: 17px;
   border-radius: 40px 40px 0 0;
 }
 .menu__title .section-title {
   font-family: "Shrikhand";
   font-size: 28px;
   font-weight: 400;
-  font-style: italic;
   height: 27px;
+  padding-bottom: 40px;
+}
+.menu__title .fa-heart {
+  background-color: #f6f6f6;
+}
+
+.step-of-meal {
+  padding-left: 13px;
+  padding-right: 13px;
+  background-color: #f6f6f6;
+  padding-bottom: 40px;
+}
+.step-of-meal .section-title {
+  margin-bottom: 12px;
+}
+.step-of-meal .section-title-text {
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 300;
+  text-transform: uppercase;
+  height: 19px;
+  margin-bottom: 5px;
+}
+.step-of-meal .section-title-underline {
+  background-color: #99E2D0;
+  bottom: 3px;
+  width: 40px;
+  height: 3px;
+}
+.step-of-meal__list {
+  list-style: none;
+  font-family: "Roboto";
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 12px;
+}
+.step-of-meal .selector:checked + .selector__label .dish__price, .step-of-meal .selector:checked + .selector__label .dish__check {
+  transform: translateX(0);
+}
+.step-of-meal .selector__label {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  background-color: #f6f6f6;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+}
+.step-of-meal .selector__label .dish {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 13.5px 15px;
+}
+.step-of-meal .selector__label .dish__section-title {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+.step-of-meal .selector__label .dish__price {
+  font-weight: 700;
+  font-size: 15.04px;
+  margin-left: 5px;
+}
+.step-of-meal .selector__label .dish__check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 59px;
+  background-color: #99E2D0;
+}
+.step-of-meal .selector__label .dish__check span {
+  background-color: #FFFFFF;
+  color: #99E2D0;
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+.step-of-meal .selector__label .dish__price, .step-of-meal .selector__label .dish__check {
+  transform: translateX(59px);
+  transition: transform 175ms linear;
+}
+
+.command {
+  background-color: #f6f6f6;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+@media (min-width: 370px) {
+  .selector__label {
+    height: 111px;
+  }
+}
+@media (min-width: 417px) {
+  .selector__label {
+    height: 92px;
+  }
+}
+@media (min-width: 434px) {
+  .selector__label {
+    height: 88px;
+  }
+}
+@media (min-width: 767px) {
+  .menu {
+    background: #FFFFFF;
+    margin-left: 75px;
+    margin-right: 75px;
+  }
+  .menu__title {
+    background-color: #f6f6f6;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    justify-content: center;
+    gap: 24px;
+  }
+  .selector__label {
+    height: 69px;
+  }
+  .step-of-meal {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media (min-width: 1279px) {
+  .menu {
+    background: #FFFFFF;
+    margin-left: 193px;
+    margin-right: 193px;
+  }
+  .step-of-meal {
+    padding-left: 210px;
+    padding-right: 210px;
+  }
+}
+/*** Screen size limits ***/
+/* Fonts */
+/* Fonts Sizes */
+/* Fonts Weight */
+/* Colors */
+.footer {
+  background-color: #353535;
+  display: flex;
+  flex-direction: column;
+  color: #FFFFFF;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  padding-left: 25px;
+  padding-right: 25px;
+  align-items: flex-start;
+}
+.footer__title {
+  background-color: transparent;
+  font-family: "Shrikhand";
+  text-align: left;
+  font-size: 18px;
+  font-weight: 400;
+  width: 139px;
+  height: 27px;
+  color: #FFFFFF;
+  margin-bottom: 16px;
+}
+.footer__links {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto";
+  font-size: 16px;
+  gap: 7px;
+}
+.footer__links-link {
+  display: flex;
+  background-color: transparent;
+  color: #FFFFFF;
+  text-align: left;
+  align-items: center;
+}
+.footer__links-link:nth-of-type(1), .footer__links-link:nth-of-type(2) {
+  width: 190px;
+}
+.footer__links-link:nth-of-type(3), .footer__links-link:nth-of-type(4) {
+  width: 130px;
+}
+.footer__links-link-text {
+  width: 168px;
+}
+.footer__links-link .fa-solid {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: #FFFFFF;
+  font-size: 11px;
+  width: 22px;
+  height: 13px;
+}
+.footer__links-link-text {
+  background-color: transparent;
+}
+
+@media (min-width: 767px) {
+  .footer {
+    flex-direction: row-reverse;
+    justify-content: end;
+    text-align: right;
+    align-items: flex-end;
+    height: 114px;
+    padding-bottom: 30px;
+  }
+  .footer__title {
+    margin-bottom: 0;
+  }
+  .footer__links {
+    flex-direction: row;
+  }
 }/*# sourceMappingURL=menu.css.map */

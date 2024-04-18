@@ -1,7 +1,12 @@
+/*** Screen size limits ***/
+/* Fonts */
+/* Fonts Sizes */
+/* Fonts Weight */
+/* Colors */
 .header {
   position: relative;
   text-align: center;
-  background-color: white;
+  background-color: #FFFFFF;
   height: 63px;
   padding-top: 14px;
   box-sizing: border-box;
@@ -14,9 +19,9 @@
   height: 44px;
 }
 .header__goback {
-  background-color: white;
+  background-color: #FFFFFF;
   position: absolute;
-  color: black;
+  color: #000000;
   width: 30px;
   height: 30px;
   left: 23px;
@@ -24,7 +29,7 @@
   z-index: 3;
 }
 .header__goback img {
-  background-color: white;
+  background-color: #FFFFFF;
   width: 17.2px;
   height: 16px;
 }
@@ -47,7 +52,7 @@
 }
 .header__location__txt {
   background-color: transparent;
-  font-family: var(--font-default);
+  font-family: "Roboto";
   font-size: 16px;
   font-weight: 500;
   height: 19px;
@@ -56,7 +61,7 @@
 .header__location__icon {
   position: absolute;
   background-color: transparent;
-  color: black;
+  color: #000000;
   right: 0px;
   top: 0px;
   width: 12px;

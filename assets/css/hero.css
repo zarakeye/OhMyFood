@@ -1,4 +1,10 @@
+/*** Screen size limits ***/
+/* Fonts */
+/* Fonts Sizes */
+/* Fonts Weight */
+/* Colors */
 .hero {
+  background-color: #f6f6f6;
   text-align: center;
   font-family: "Roboto";
   padding-left: 34px;
