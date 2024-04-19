@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
   <meta charset="utf-8">
@@ -22,24 +22,23 @@
       <img class="header__logo" src="assets/images/logo/ohmyfood@2x.svg" alt="logo cliquable">
     </div>
     <h1 class="sr-only">ohmyfood</h1>
-    <section class="header__location">
-      <button class="header__location__btn">
-        <img class="header__location__icon" src="assets/images/icons/location.svg" alt="">
-        <span class="sr-only">Location:</span>
-      </button>
-      <p class="header__location__txt">Paris, Belleville</p>
-    </section>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="hero__content">
-        <h2 class="section-title">Réservez le menu qui vous convient</h2>
-        <p class="hero__text">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-      </div>
-      <button class="cta hero__button">
-        <a href="#restaurants" class="cta-txt">Explorer nos restaurants</a>
+    <section class="location">
+      <h2 class="sr-only">Location</h2>
+      <button type="button" class="location__btn">
+        <img class="location__icon" src="assets/images/icons/location.svg" alt="">
+        <span class="sr-only">Location:</span>
       </button>
+      <p class="location__txt">Paris, Belleville</p>
+    </section>
+    <section class="hero">
+      <h2 class="section-title">R&eacute;servez le menu qui vous convient</h2>
+      <p class="hero__text">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+      <a href="#restaurants" class="cta hero__button">
+        Explorer nos restaurants
+      </a>
     </section>
     <section class="fonctionnement">
       <h2 class="section-title">Fonctionnement</h2>
@@ -77,6 +76,7 @@
             <span class="fonctionnement__number">3</span>
           </div>
         </li>
+      </ol>
     </section>
     <section id="restaurants">
       <h2 class="section-title">Restaurants</h2>
@@ -93,10 +93,11 @@
                 <p class="card__info">Ménilmontant</p>
               </div>
             </a>
-            <form action="" class="like-form">
+            <form class="like-form">
               <label for="like_palette-du-gout" class="fav-label">
                 <i class="fa-solid fa-heart"></i>
                 <i class="fa-regular fa-heart"></i>
+                <span class="sr-only">Ajouter aux favoris</span>
               </label>
               <input type="checkbox" id="like_palette-du-gout" name="like_palette-du-gout" class="like_button"
                 value="favorite">
@@ -116,14 +117,15 @@
                 <p class="card__info">Charonne</p>
               </div>
             </a>
-            <form action="" class="like-form">
-              <input type="checkbox" id="like_note-enchantee" name="like_note-enchantee" class="like_button"
-                value="favorite">
-              <label for="like_note-enchantee" class="fav-label">
-                <i class="fa-solid fa-heart"></i>
-                <i class="fa-regular fa-heart"></i>
-              </label>
-            </form>
+            <!-- <form class="like-form"> -->
+            <input type="checkbox" id="like_note-enchantee" name="like_note-enchantee" class="like_button"
+              value="favorite">
+            <label for="like_note-enchantee" class="fav-label">
+              <i class="fa-solid fa-heart"></i>
+              <i class="fa-regular fa-heart"></i>
+              <span class="sr-only">Ajouter aux favoris</span>
+            </label>
+            <!-- </form> -->
           </div>
           <p class="card__new">Nouveau</p>
         </article>
@@ -139,12 +141,13 @@
                 <p class="card__info">Cité Rouge</p>
               </div>
             </a>
-            <form action="" class="like-form">
+            <form class="like-form">
               <input type="checkbox" id="like_a-la-francaise" name="like_a-la-francaise" class="like_button"
                 value="favorite">
               <label for="like_a-la-francaise" class="fav-label">
                 <i class="fa-solid fa-heart"></i>
                 <i class="fa-regular fa-heart"></i>
+                <span class="sr-only">Ajouter aux favoris</span>
               </label>
             </form>
           </div>
@@ -162,12 +165,13 @@
                 <p class="card__info">Folie-Méricourt</p>
               </div>
             </a>
-            <form action="" class="like-form">
+            <form class="like-form">
               <input type="checkbox" id="like_delice-des-sens" name="like_delice-des-sens" class="like_button"
                 value="favorite">
               <label for="like_delice-des-sens" class="fav-label">
                 <i class="fa-solid fa-heart"></i>
                 <i class="fa-regular fa-heart"></i>
+                <span class="sr-only">Ajouter aux favoris</span>
               </label>
             </form>
           </div>
@@ -188,7 +192,7 @@
         <i class="fa-solid fa-handshake-angle"></i>
         <span class="footer__links-link-text">Devenir partenaire</span>
       </a>
-      <a class="footer__links-link" href="#">Mentions légales</a>
+      <a class="footer__links-link" href="#">Mentions l&eacute;gales</a>
       <a class="footer__links-link" href="mailto:">Contact</a>
     </div>
   </footer>
