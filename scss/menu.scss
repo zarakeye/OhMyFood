@@ -1,4 +1,5 @@
-@import url(/assets/css/shared.css);
-@import url(/assets/css/menu-card.css);
-@import url(/assets/css/header.css);
-@import url(/assets/css/footer.css);
+@import "utilities/variables";
+@import "shared";
+@import "header";
+@import "menu-card";
+@import "footer";

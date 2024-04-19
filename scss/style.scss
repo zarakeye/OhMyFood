@@ -1,9 +1,10 @@
-@import url(/assets/css/shared.css);
-@import url(/assets/css/header.css);
-@import url(/assets/css/hero.css);
-@import url(/assets/css/fonctionnement.css);
-@import url(/assets/css/restaurants.css);
-@import url(/assets/css/footer.css);
+@import "utilities/variables";
+@import "shared";
+@import "header";
+@import "hero";
+@import "fonctionnement";
+@import "restaurants";
+@import "footer";
 
 
 

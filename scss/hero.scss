@@ -1,7 +1,9 @@
+@import "utilities/variables";
+
 .hero {
-  background-color: var(--background-color);
+  background-color: $background-color;
   text-align: center;
-  font-family: 'Roboto';
+  font-family: $font-default;
   padding-left: 34px;
   padding-right: 34px;
   &__content {

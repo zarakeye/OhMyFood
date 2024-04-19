@@ -1,10 +1,10 @@
 @import "utilities/variables";
 
 .footer {
-  background-color: var(--footer-color);
+  background-color: $footer-color;
   display: flex;
   flex-direction: column;
-  color: white;
+  color: $footer-text-color;
   padding-top: 22px;
   padding-bottom: 22px;
   padding-left: 25px;
@@ -12,20 +12,20 @@
   align-items: flex-start;
   &__title {
     background-color: transparent;
-    font-family: var(--font-title);
+    font-family: $font-title;
     text-align: left;
     font-size: 18px;
     font-weight: 400;
     width: 139px;
     height: 27px;
-    color: white;
+    color: $footer-text-color;
     margin-bottom: 16px;
   }
   &__links {
     background-color: transparent;
     display: flex;
     flex-direction: column;
-    font-family: var(--font-default);
+    font-family: $font-default;
     font-size: 16px;
     gap: 7px;
     // &:first-child, &:nth-child(2) {
@@ -37,8 +37,7 @@
     &-link {
       display: flex;
       background-color: transparent;
-      color: white;
-      // justify-content: space-between;
+      color: $footer-text-color;
       text-align: left;
       align-items: center;
       &:nth-of-type(1), &:nth-of-type(2) {
@@ -53,19 +52,17 @@
       .fa-solid {
         background-clip: text;
         -webkit-background-clip: text;
-        color: white;
+        color: $footer-text-color;
         font-size: 11px;
         width: 22px;
         height: 13px;
       }
       &-text {
         background-color: transparent;
-        // padding-left: 11px;
       }
     }
   }
 }
-
 
 @media (min-width: $tablet-min-width) {
   .footer {
@@ -74,20 +71,12 @@
     text-align: right;
     align-items: flex-end;
     height: 114px;
-    // align-items: flex-end;
-    // padding-left: 50px;
-    // padding-right: 50px;
     padding-bottom: 30px;
     &__title {
       margin-bottom: 0;
     }
     &__links {
       flex-direction: row;
-      // &-link {
-      //   &:nth-of-type(1), &:nth-of-type(2) {
-      //     width: 168px;
-      //   }
-      // }
     }
   }
 }
