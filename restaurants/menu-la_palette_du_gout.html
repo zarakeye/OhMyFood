@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Menu - La palette du gout</title>
+  <title>Menu - La palette du go&ucirc;t</title>
   <link rel="icon" type="image/ico" href="/assets/images/logo/ohmyfood.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,224 +20,234 @@
     <div class="header">
       <img class="header__logo" src="/assets/images/logo/ohmyfood@2x.svg" alt="logo cliquable">
     </div>
-    <a class="header__goback" href="/index.html"><img src="/assets/images/icons/goback.svg" alt=""></a>
+    <a class="header__goback" href="/index.html">
+      <img src="/assets/images/icons/goback.svg" alt="Arrow to go back">
+      <span class="sr-only">Retour</span>
+    </a>
   </header>
 
+  <div class="img-wrapper">
+    <img src="/assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Assiette gastronomique">
+  </div>
   <main>
-    <div class="img-wrapper">
-      <img src="/assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
-    </div>
     <article class="menu">
       <div class="menu__title">
         <h1 class="section-title">
           <span class="sr-only">Menu de "</span>
-          La palette du goût
-          <span class="sr-only">" présenté par ohmyfood</span>
+          La palette du go&ucirc;t
+          <span class="sr-only">" pr&eacute;sent&eacute; par ohmyfood</span>
         </h1>
-        <form action="" class="like-form">
+        <form class="like-form">
           <input type="checkbox" id="like_palette-du-gout" name="like_palette-du-gout" class="like_button"
             value="favorite">
           <label for="like_palette-du-gout" class="fav-label">
             <i class="fa-solid fa-heart"></i>
             <i class="fa-regular fa-heart"></i>
+            <span class="sr-only">Ajouter au favoris</span>
           </label>
         </form>
       </div>
-      <section class="step-of-meal">
-        <div class="section-title">
-          <h2 class="section-title-text">entrées</h2>
-          <div class="section-title-underline"></div>
+      <form id="order">
+        <section class="step-of-meal">
+          <div class="section-title">
+            <h2 class="section-title-text">entr&eacute;es</h2>
+            <div class="section-title-underline"></div>
+          </div>
+          <ul class="step-of-meal__list">
+            <li class="step-of-meal__item">
+              <input type="checkbox" id="fricassee-d-escargots" name="fricassee-d-escargots" class="selector sr-only"
+                value="fricassee-d-escargots">
+              <div class="dish">
+                <div class="dish__description">
+                  <div class="dish__section-title">
+                    <h3 class="dish__title">Fricass&eacute;e d'escargots</h3>
+                    <p class="dish__info">Au piment d'espelette</p>
+                  </div>
+                  <p class="dish__price">25€</p>
+                </div>
+                <div class="dish__check">
+                  <span>
+                    <i class="fa-solid fa-check"></i>
+                  </span>
+                </div>
+                <label for="fricassee-d-escargots" class="selector__label">Fricass&eacute;e d'escargots</label>
+              </div>
+            </li>
+            <li class="step-of-meal__item">
+              <input type="checkbox" id="foie-gras-de-canard-mi-cuit" name="foie-gras-de-canard-mi-cuit"
+                class="selector sr-only" value="foie-gras-de-canard-mi-cuit">
+              <div class="dish">
+                <div class="dish__description">
+                  <div class="dish__section-title">
+                    <h3 class="dish__title">Foi gras de canard mi-cuit</h3>
+                    <p class="dish__info">Et ses copeaux de truffe noire</p>
+                  </div>
+                  <p class="dish__price">35€</p>
+                </div>
+                <div class="dish__check">
+                  <span>
+                    <i class="fa-solid fa-check"></i>
+                  </span>
+                </div>
+                <label for="foie-gras-de-canard-mi-cuit" class="selector__label">Foi gras de canard mi-cuit</label>
+              </div>
+            </li>
+            <li class="step-of-meal__item">
+              <input type="checkbox" id="oeuf-au-plat" name="oeuf-au-plat" class="selector sr-only"
+                value="oeuf-au-plat">
+              <div class="dish">
+                <div class="dish__description">
+                  <div class="dish__section-title">
+                    <h3 class="dish__title">&OElig;uf au plat</h3>
+                    <p class="dish__info">Assaisonn&eacute; à la truffe sur lit de caviar</p>
+                  </div>
+                  <p class="dish__price">20€</p>
+                </div>
+                <div class="dish__check">
+                  <span>
+                    <i class="fa-solid fa-check"></i>
+                  </span>
+                </div>
+                <label for="oeuf-au-plat" class="selector__label">&OElig;uf au plat</label>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section class="step-of-meal">
+          <div class="section-title">
+            <h2 class="section-title-text">plats</h2>
+            <div class="section-title-underline"></div>
+          </div>
+          <ul class="step-of-meal__list">
+            <li class="step-of-meal__item">
+              <input type="checkbox" id="filet-de-boeuf-aux-herbes" name="filet-de-boeuf-aux-herbes"
+                class="selector sr-only" value="filet-de-boeuf-aux-herbes">
+              <div class="dish">
+                <div class="dish__description">
+                  <div class="dish__section-title">
+                    <h3 class="dish__title">Filet de b&oelig;uf aux herbes</h3>
+                    <p class="dish__info">Accompagn&eacute; de sa ribambelle de l&eacute;gumes</p>
+                  </div>
+                  <p class="dish__price">40€</p>
+                </div>
+                <div class="dish__check">
+                  <span>
+                    <i class="fa-solid fa-check"></i>
+                  </span>
+                </div>
+                <label for="filet-de-boeuf-aux-herbes" class="selector__label">Filet de b&oelig;uf aux herbes</label>
+              </div>
+            </li>
+            <li class="step-of-meal__item">
+              <input type="checkbox" id="parmentier-de-queue-de-boeuf" name="parmentier-de-queue-de-boeuf"
+                class="selector sr-only" value="parmentier-de-queue-de-boeuf">
+              <div class="dish">
+                <div class="dish__description">
+                  <div class="dish__section-title">
+                    <h3 class="dish__title">Parmentier de queue de boeuf</h3>
+                    <p class="dish__info">&Agrave; la truffe noire sur sa pur&eacute;e de panais</p>
+                  </div>
+                  <p class="dish__price">35€</p>
+                </div>
+                <div class="dish__check">
+                  <span>
+                    <i class="fa-solid fa-check"></i>
+                  </span>
+                </div>
+                <label for="parmentier-de-queue-de-boeuf" class="selector__label">Parmentier de queue de boeuf</label>
+              </div>
+            </li>
+            <li class="step-of-meal__item">
+              <input type="checkbox" id="filet-de-turbot" name="filet-de-turbot" class="selector sr-only"
+                value="filet-de-turbot">
+              <div class="dish">
+                <div class="dish__description">
+                  <div class="dish__section-title">
+                    <h3 class="dish__title">Filet de turbot</h3>
+                    <p class="dish__info">Aux agrumes</p>
+                  </div>
+                  <p class="dish__price">44€</p>
+                </div>
+                <div class="dish__check">
+                  <span>
+                    <i class="fa-solid fa-check"></i>
+                  </span>
+                </div>
+                <label for="filet-de-turbot" class="selector__label">Filet de turbot</label>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section class="step-of-meal">
+          <div class="section-title">
+            <h2 class="section-title-text">desserts</h2>
+            <div class="section-title-underline"></div>
+          </div>
+          <ul class="step-of-meal__list">
+            <li class="step-of-meal__item">
+              <input type="checkbox" id="paris-brest" name="paris-brest" class="selector sr-only" value="paris-brest">
+              <div class="dish">
+                <div class="dish__description">
+                  <div class="dish__section-title">
+                    <h3 class="dish__title">Paris-Brest</h3>
+                    <p class="dish__info">Revisit&eacute;</p>
+                  </div>
+                  <p class="dish__price">18€</p>
+                </div>
+                <div class="dish__check">
+                  <span>
+                    <i class="fa-solid fa-check"></i>
+                  </span>
+                </div>
+                <label for="paris-brest" class="selector__label">Paris-Brest</label>
+              </div>
+            </li>
+            <li class="step-of-meal__item">
+              <input type="checkbox" id="macaron-au-chocolat-d-exception" name="macaron-au-chocolat-d-exception"
+                class="selector sr-only" value="macaron-au-chocolat-d-exception">
+              <div class="dish">
+                <div class="dish__description">
+                  <div class="dish__section-title">
+                    <h3 class="dish__title">Macaron au chocolat d'exception</h3>
+                    <p class="dish__info">Et glace à la vanille de Madagascar</p>
+                  </div>
+                  <p class="dish__price">22€</p>
+                </div>
+                <div class="dish__check">
+                  <span>
+                    <i class="fa-solid fa-check"></i>
+                  </span>
+                </div>
+                <label for="macaron-au-chocolat-d-exception" class="selector__label">Macaron au chocolat
+                  d'exception</label>
+              </div>
+            </li>
+            <li class="step-of-meal__item">
+              <input type="checkbox" id="mousse-au-chocolat" name="mousse-au-chocolat" class="selector sr-only"
+                value="mousse-au-chocolat">
+              <div class="dish">
+                <div class="dish__description">
+                  <div class="dish__section-title">
+                    <h3 class="dish__title">Mousse au chocolat</h3>
+                    <p class="dish__info">Au piment d'espelette et à la truffe noire</p>
+                  </div>
+                  <p class="dish__price">23€</p>
+                </div>
+                <div class="dish__check">
+                  <span>
+                    <i class="fa-solid fa-check"></i>
+                  </span>
+                </div>
+                <label for="mousse-au-chocolat" class="selector__label">Mousse au chocolat</label>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <div class="command">
+          <button type="submit" form="order" class="cta command-btn">
+            <span class="cta-txt">Commander</span>
+          </button>
         </div>
-        <ul class="step-of-meal__list">
-          <li class="step-of-meal__item">
-            <input type="checkbox" id="fricassee-d-escargots" class="selector sr-only" value="fricassee-d-escargots">
-            <label for="fricassee-d-escargots" class="selector__label">
-              <div class="dish">
-                <div class="dish__section-title">
-                  <h3 class="dish__title">Fricassée d'escargots</h3>
-                  <p class="dish__info">Au piment d'espelette</p>
-                </div>
-                <p class="dish__price">25€</p>
-              </div>
-              <div class="dish__check">
-                <span>
-                  <i class="fa-solid fa-check"></i>
-                </span>
-              </div>
-              </div>
-            </label>
-          </li>
-          <li class="step-of-meal__item">
-            <input type="checkbox" id="foie-gras-de-canard-mi-cuit" class="selector sr-only"
-              value="foie-gras-de-canard-mi-cuit">
-            <label for="foie-gras-de-canard-mi-cuit" class="selector__label">
-              <div class="dish">
-                <div class="dish__section-title">
-                  <h3 class="dish__title">Foi gras de canard mi-cuit</h3>
-                  <p class="dish__info">Et ses copeaux de truffe noire</p>
-                </div>
-                <p class="dish__price">35€</p>
-              </div>
-              <div class="dish__check">
-                <span>
-                  <i class="fa-solid fa-check"></i>
-                </span>
-              </div>
-              </div>
-            </label>
-          </li>
-          <li class="step-of-meal__item">
-            <input type="checkbox" id="oeuf-au-plat" class="selector sr-only" value="oeuf-au-plat">
-            <label for="oeuf-au-plat" class="selector__label">
-              <div class="dish">
-                <div class="dish__section-title">
-                  <h3 class="dish__title">&OElig;uf au plat</h3>
-                  <p class="dish__info">Assaisonné à la truffe sur lit de caviar</p>
-                </div>
-                <p class="dish__price">20€</p>
-              </div>
-              <div class="dish__check">
-                <span>
-                  <i class="fa-solid fa-check"></i>
-                </span>
-              </div>
-              </div>
-            </label>
-          </li>
-        </ul>
-      </section>
-      <section class="step-of-meal">
-        <div class="section-title">
-          <h2 class="section-title-text">plats</h2>
-          <div class="section-title-underline"></div>
-        </div>
-        <ul class="step-of-meal__list">
-          <li class="step-of-meal__item">
-            <input type="checkbox" id="filet-de-boeuf-aux-herbes" class="selector sr-only"
-              value="filet-de-boeuf-aux-herbes">
-            <label for="filet-de-boeuf-aux-herbes" class="selector__label">
-              <div class="dish">
-                <div class="dish__section-title">
-                  <h3 class="dish__title">Filet de b&oelig;uf aux herbes</h3>
-                  <p class="dish__info">Accompagné de sa ribambelle de légumes</p>
-                </div>
-                <p class="dish__price">40€</p>
-              </div>
-              <div class="dish__check">
-                <span>
-                  <i class="fa-solid fa-check"></i>
-                </span>
-              </div>
-              </div>
-            </label>
-          </li>
-          <li class="step-of-meal__item">
-            <input type="checkbox" id="parmentier-de-queue-de-boeuf" class="selector sr-only"
-              value="parmentier-de-queue-de-boeuf">
-            <label for="parmentier-de-queue-de-boeuf" class="selector__label">
-              <div class="dish">
-                <div class="dish__section-title">
-                  <h3 class="dish__title">Parmentier de queue de boeuf</h3>
-                  <p class="dish__info">&Agrave; la truffe noire sur sa purée de panais</p>
-                </div>
-                <p class="dish__price">35€</p>
-              </div>
-              <div class="dish__check">
-                <span>
-                  <i class="fa-solid fa-check"></i>
-                </span>
-              </div>
-              </div>
-            </label>
-          </li>
-          <li class="step-of-meal__item">
-            <input type="checkbox" id="filet-de-turbot" class="selector sr-only" value="filet-de-turbot">
-            <label for="filet-de-turbot" class="selector__label">
-              <div class="dish">
-                <div class="dish__section-title">
-                  <h3 class="dish__title">Filet de turbot</h3>
-                  <p class="dish__info">Aux agrumes</p>
-                </div>
-                <p class="dish__price">44€</p>
-              </div>
-              <div class="dish__check">
-                <span>
-                  <i class="fa-solid fa-check"></i>
-                </span>
-              </div>
-              </div>
-            </label>
-          </li>
-        </ul>
-      </section>
-      <section class="step-of-meal">
-        <div class="section-title">
-          <h2 class="section-title-text">desserts</h2>
-          <div class="section-title-underline"></div>
-        </div>
-        <ul class="step-of-meal__list">
-          <li class="step-of-meal__item">
-            <input type="checkbox" id="paris-brest" class="selector sr-only" value="paris-brest">
-            <label for="paris-brest" class="selector__label">
-              <div class="dish">
-                <div class="dish__section-title">
-                  <h3 class="dish__title">Paris-Brest</h3>
-                  <p class="dish__info">Revisité</p>
-                </div>
-                <p class="dish__price">18€</p>
-              </div>
-              <div class="dish__check">
-                <span>
-                  <i class="fa-solid fa-check"></i>
-                </span>
-              </div>
-              </div>
-            </label>
-          </li>
-          <li class="step-of-meal__item">
-            <input type="checkbox" id="macaron-au-chocolat-d-exception" class="selector sr-only"
-              value="macaron-au-chocolat-d-exception">
-            <label for="macaron-au-chocolat-d-exception" class="selector__label">
-              <div class="dish">
-                <div class="dish__section-title">
-                  <h3 class="dish__title">Macaron au chocolat d'exception</h3>
-                  <p class="dish__info">Et glace à la vanille de Madagascar</p>
-                </div>
-                <p class="dish__price">22€</p>
-              </div>
-              <div class="dish__check">
-                <span>
-                  <i class="fa-solid fa-check"></i>
-                </span>
-              </div>
-              </div>
-            </label>
-          </li>
-          <li class="step-of-meal__item">
-            <input type="checkbox" id="mousse-au-chocolat" class="selector sr-only" value="mousse-au-chocolat">
-            <label for="mousse-au-chocolat" class="selector__label">
-              <div class="dish">
-                <div class="dish__section-title">
-                  <h3 class="dish__title">Mousse au chocolat</h3>
-                  <p class="dish__info">Au piment d'espelette et à la truffe noire</p>
-                </div>
-                <p class="dish__price">23€</p>
-              </div>
-              <div class="dish__check">
-                <span>
-                  <i class="fa-solid fa-check"></i>
-                </span>
-              </div>
-              </div>
-            </label>
-          </li>
-        </ul>
-      </section>
-      <section class="command">
-        <button class="cta command-btn">
-          <span class="cta-txt">Commander</span>
-        </button>
-      </section>
     </article>
   </main>
   <footer class="footer">
@@ -251,7 +261,7 @@
         <i class="fa-solid fa-handshake-angle"></i>
         <span class="footer__links-link-text">Devenir partenaire</span>
       </a>
-      <a class="footer__links-link" href="#">Mentions légales</a>
+      <a class="footer__links-link" href="#">Mentions l&eacute;gales</a>
       <a class="footer__links-link" href="mailto:">Contact</a>
     </div>
   </footer>

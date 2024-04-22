@@ -3,15 +3,22 @@
 .img-wrapper {
   img {
     height: 275px;
-    width: 100vw;
+    width: 100%;
+    align-items: stretch;
     object-fit: cover;
   }
 }
 
-.menu {
-  position: relative;
+main {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  max-width: 1280px;
   margin-top: -50px;
   border-radius: 40px 40px 0 0;
   background-color: $background-color;
@@ -20,10 +27,9 @@
     justify-content: space-between;
     background-color: $background-color;
     align-items: baseline;
+    width: 100%;
     padding-top: 32px;
     padding-bottom: 40px;
-    padding-left: 17px;
-    padding-right: 17px;
     border-radius: 40px 40px 0 0;
     .section-title {
       font-family: $font-title;
@@ -33,6 +39,11 @@
       height: 27px;
       padding-bottom: 40px;
     }
+    .like-form {
+      background-color: $background-color;
+      margin-left: 24px;
+      margin-right: 24px;
+    }
     .fa-heart {
       background-color: $background-color;
     }
@@ -40,10 +51,9 @@
 }
 
 .step-of-meal {
-  padding-left: 13px;
-  padding-right: 13px;
   background-color: $background-color;
   padding-bottom: 40px;
+  flex: 1;
   .section-title {
     margin-bottom: 12px;
     &-text {
@@ -61,90 +71,163 @@
       height: 3px;
     }
   }
-
   &__list {
     list-style: none;
     font-family: $font-default;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    justify-content: center;
+    align-items: stretch;
     gap: 12px;
   }
+}
 
-  .selector {
-    &:checked + .selector__label {
-      .dish__price, .dish__check  {
-        transform: translateX(0);
-      }
+.selector {
+  &:checked + .dish {
+    .dish__description .dish__price, .dish__check {
+      transform: translateX(0);
     }
-    &__label {
-      display: flex;
-      justify-content: space-between;
-      overflow: hidden;
-      background-color: $background-color;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
-      
-      .dish {
-        display: flex;
-        flex: 1;
-        justify-content: space-between;
-        align-items: flex-end;
-        padding: 13.5px 15px;
-        &__section-title {
-          display: flex;
-          flex-direction: column;
-          height: 100%;
-          justify-content: space-between;
-        }
-        &__price {
-          font-weight: 700;
-          font-size: 15.04px;
-          margin-left: 5px;
-        }
-        &__check {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: $dish__check-width;
-          background-color: $notication-background-color;
-          & span {
-            background-color: $light-theme-background-content-color;
-            color: $notication-background-color;
-            text-align: center;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-          }
-        }
-        &__price, &__check {
-          transform: translateX($dish__check-width);
-          transition: transform 175ms linear;
-        }
-      }
+  }
+  &:not(:checked) + .dish {
+    .dish__description .dish__price, .dish__check  {
+      transform: translateX($dish__check-width);
     }
   }
 }
 
+.dish {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex: 1;
+  overflow: hidden;
+  background-color: $background-color;
+  font-family: $font-default;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+  &__description {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 13.5px 15px;
+  }
+  &__section-title {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+    justify-content: space-between;
+  }
+  &__price {
+    font-family: $font-default;
+    font-weight: 700;
+    font-size: 15.04px;
+    margin-left: 5px;
+  }
+  &__check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $dish__check-width;
+    background-color: $notication-background-color;
+    & span {
+      background-color: $light-theme-background-content-color;
+      color: $notication-background-color;
+      text-align: center;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+    }
+  }
+  &__price, &__check {
+    transform: translateX($dish__check-width);
+    transition: transform 175ms linear;
+  }
+  .selector__label {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+}
+
+
 .command {
+  display: flex;
+  justify-content: center;
   background-color: $background-color;
   text-align: center;
   padding-bottom: 40px;
 }
 
 @media (min-width: 370px) {
+  .menu {
+    background: $background-color;
+    // padding-left: 13px;
+    // padding-right: 13px;
+    &__title {
+      padding-left: 17px;
+      padding-right: 17px;
+    }
+    form {
+      .step-of-meal {
+        padding-left: 13px;
+        padding-right: 13px;
+      }
+      
+    } 
+  }
   .selector__label {
     height: 111px;
+  }
+  .dish {
+    flex: 1
   }
 }
 
 @media (min-width: 417px) {
+  .menu {
+    &__title {
+      background-color: $background-color;
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+      justify-content: center;
+      gap: 24px;
+    }
+    .section__title {
+      padding-left: 17px;
+      padding-right: 17px;
+    }
+    form {
+      .step-of-meal {
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+    }
+  }
+  
   .selector__label {
     height: 92px;
   }
 }
 
 @media (min-width: 434px) {
+  .menu {
+    &__title {
+      background-color: $background-color;
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+      justify-content: center;
+      gap: 24px;
+    }
+  }
   .selector__label {
     height: 88px;
   }
@@ -167,11 +250,6 @@
   .selector__label {
     height: 69px;
   }
-
-  .step-of-meal {
-    padding-left: 80px;
-    padding-right: 80px;
-  }
 }
 
 @media (min-width: $desktop-min-width) {
@@ -179,10 +257,9 @@
     background: $light-theme-background-content-color;
     margin-left: 193px;
     margin-right: 193px;
-  }
-
-  .step-of-meal {
-    padding-left: 210px;
-    padding-right: 210px;
+    form .step-of-meal {
+        padding-left: 210px;
+        padding-right: 210px;
+    }
   }
 }
