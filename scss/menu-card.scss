@@ -1,6 +1,13 @@
 @import "utilities/variables";
 
+body {
+  overflow-x: hidden;
+  // width: 100vw;
+}
+
 .img-wrapper {
+  // min-width: 370px; 
+  // width: 100vw;
   img {
     height: 275px;
     width: 100%;
@@ -18,6 +25,9 @@ main {
 .menu {
   display: flex;
   flex-direction: column;
+  min-width: 370px;
+  // Le body a overflow-x hidden et menu a min-width 370px
+  width: 100%;
   max-width: 1280px;
   margin-top: -50px;
   border-radius: 40px 40px 0 0;
@@ -28,6 +38,8 @@ main {
     background-color: $background-color;
     align-items: baseline;
     width: 100%;
+    // padding-left: 17px;
+    padding-right: 17px;
     padding-top: 32px;
     padding-bottom: 40px;
     border-radius: 40px 40px 0 0;
@@ -37,7 +49,12 @@ main {
       font-weight: 400;
       // font-style: italic; // Cette propriété semble ne pas être nécessaire pour être au plus proche du rendu de la maquette
       height: 27px;
+      width: calc(100% - ($like_form_size + 2 * $like_form_margin_right_and_left));
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
       padding-bottom: 40px;
+      padding-left: 17px;
     }
     .like-form {
       background-color: $background-color;
@@ -84,12 +101,12 @@ main {
 
 .selector {
   &:checked + .dish {
-    .dish__description .dish__price, .dish__check {
+    .dish__description .dish__price, .dish__check, .dish__price  {
       transform: translateX(0);
     }
   }
   &:not(:checked) + .dish {
-    .dish__description .dish__price, .dish__check  {
+    .dish__description .dish__price, .dish__check, .dish__price  {
       transform: translateX($dish__check-width);
     }
   }
@@ -99,8 +116,9 @@ main {
   position: relative;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  // justify-content: space-between;
   flex: 1;
+  min-width: 344px;
   overflow: hidden;
   background-color: $background-color;
   font-family: $font-default;
@@ -110,22 +128,32 @@ main {
     flex: 1;
     display: flex;
     flex-direction: row;
+    width: calc(100% - 90px); // Nécessité de donner une largeur au conteneur. Celle-ci est calculee dans le CSS
     justify-content: space-between;
     align-items: flex-end;
-    padding: 13.5px 15px;
+    padding-top: 13.5px;
+    padding-bottom: 13.5px;
+    padding-left: 15px; 
   }
   &__section-title {
     display: flex;
     flex-direction: column;
-    flex: 1;
+    min-width: 225px;
     height: 100%;
     justify-content: space-between;
+  }
+  &__title, &__info {
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
   &__price {
     font-family: $font-default;
     font-weight: 700;
     font-size: 15.04px;
     margin-left: 5px;
+    margin-right: 15px;
+    margin-top: 36.6px;
   }
   &__check {
     display: flex;
@@ -165,15 +193,16 @@ main {
   padding-bottom: 40px;
 }
 
-@media (min-width: 370px) {
+// @media (min-width: 370px) {
+@media (max-width: 416px) {
   .menu {
-    background: $background-color;
+    // background: $background-color;
     // padding-left: 13px;
     // padding-right: 13px;
-    &__title {
-      padding-left: 17px;
-      padding-right: 17px;
-    }
+    // &__title {
+    //   padding-left: 17px;
+    //   padding-right: 17px;
+    // }
     form {
       .step-of-meal {
         padding-left: 13px;
@@ -204,12 +233,12 @@ main {
       padding-left: 17px;
       padding-right: 17px;
     }
-    form {
-      .step-of-meal {
-        padding-left: 50px;
-        padding-right: 50px;
-      }
-    }
+    // form {
+    //   .step-of-meal {
+    //     padding-left: 50px;
+    //     padding-right: 50px;
+    //   }
+    // }
   }
   
   .selector__label {
