@@ -196,13 +196,6 @@ main {
 // @media (min-width: 370px) {
 @media (max-width: 416px) {
   .menu {
-    // background: $background-color;
-    // padding-left: 13px;
-    // padding-right: 13px;
-    // &__title {
-    //   padding-left: 17px;
-    //   padding-right: 17px;
-    // }
     form {
       .step-of-meal {
         padding-left: 13px;
@@ -219,47 +212,62 @@ main {
   }
 }
 
+// @media (min-width: 417px) {
+//   .menu {
+//     &__title {
+//       background-color: $background-color;
+//       width: 100%;
+//       padding-left: 0;
+//       padding-right: 0;
+//       justify-content: center;
+//       gap: 24px;
+//     }
+//     .section__title {
+//       padding-left: 17px;
+//       padding-right: 17px;
+//     }
+//     // form {
+//     //   .step-of-meal {
+//     //     padding-left: 50px;
+//     //     padding-right: 50px;
+//     //   }
+//     // }
+//   }
+  
+//   .selector__label {
+//     height: 92px;
+//   }
+// }
+
 @media (min-width: 417px) {
   .menu {
-    &__title {
-      background-color: $background-color;
-      width: 100%;
-      padding-left: 0;
-      padding-right: 0;
-      justify-content: center;
-      gap: 24px;
-    }
-    .section__title {
-      padding-left: 17px;
-      padding-right: 17px;
-    }
-    // form {
-    //   .step-of-meal {
-    //     padding-left: 50px;
-    //     padding-right: 50px;
-    //   }
+    // &__title {
+    //   background-color: $background-color;
+    //   width: 100%;
+    //   padding-left: 0;
+    //   padding-right: 0;
+    //   justify-content: center;
+    //   gap: 24px;
     // }
-  }
-  
-  .selector__label {
-    height: 92px;
-  }
-}
-
-@media (min-width: 434px) {
-  .menu {
+    form .step-of-meal {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
     &__title {
-      background-color: $background-color;
-      width: 100%;
-      padding-left: 0;
-      padding-right: 0;
       justify-content: center;
-      gap: 24px;
+      align-items: center;
+      flex: auto;
+      .section-title {
+        // all: initial;
+        display: inline-block;
+        width: initial;
+        text-align: center;
+      }
     }
   }
-  .selector__label {
-    height: 88px;
-  }
+  // .selector__label {
+  //   height: 88px;
+  // }
 }
 
 @media (min-width: $tablet-min-width) {
@@ -267,17 +275,17 @@ main {
     background: $light-theme-background-content-color;
     margin-left: 75px;
     margin-right: 75px;
-    &__title {
-      background-color: $background-color;
-      width: 100%;
-      padding-left: 0;
-      padding-right: 0;
-      justify-content: center;
-      gap: 24px;
-    }
-  }
-  .selector__label {
-    height: 69px;
+  //   &__title {
+  //     background-color: $background-color;
+  //     width: 100%;
+  //     padding-left: 0;
+  //     padding-right: 0;
+  //     justify-content: center;
+  //     gap: 24px;
+  //   }
+  // }
+  // .selector__label {
+  //   height: 69px;
   }
 }
 
@@ -287,8 +295,19 @@ main {
     margin-left: 193px;
     margin-right: 193px;
     form .step-of-meal {
-        padding-left: 210px;
-        padding-right: 210px;
+      padding-left: 210px;
+      padding-right: 210px;
+    }
+    &__title {
+      justify-content: center;
+      align-items: center;
+      flex: auto;
+      .section-title {
+        // all: initial;
+        display: inline-block;
+        width: initial;
+        text-align: center;
+      }
     }
   }
 }
