@@ -1,14 +1,33 @@
 @import "utilities/variables";
 
 
-@keyframes fadeIn {
+@keyframes fadeIn_step-of-meal-title {
   0% {
     opacity: 0;
+  }
+  25% {
+    opacity: 1;
   }
   100% {
     opacity: 1;
   }
 }
+
+@keyframes fadeIn_meal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+$nb_steps-of-meal: 3;
+$nb_meals_by_step-of-meal: 3;
+$step-of-meal-title__anim-dur: 400;
+$meal__anim-dur: 400;
+$step-of-meal__anim-dur: $step-of-meal-title__anim-dur + $nb_meals_by_step-of-meal * $meal__anim-dur;
+$step-of-meal__anim-end-latency: 1000;
+$step-of-meal__anim-delay-base: $step-of-meal__anim-dur + $step-of-meal__anim-end-latency;
 
 body {
   overflow-x: hidden;
@@ -166,18 +185,27 @@ main {
   // }
 
 }
-.step-of-meal .section-title-text, .step-of-meal__item {
-  animation: fadeIn 900ms ease-in-out;
-  animation-fill-mode: both;
+.step-of-meal {
+  .section-title-text {
+    animation: fadeIn_step-of-meal-title #{$step-of-meal-title__anim-dur}ms ease-in-out;
+    animation-fill-mode: both;
+  }
+  .step-of-meal__item {
+    animation: fadeIn_meal #{$meal__anim-dur}ms ease-in-out;
+    animation-fill-mode: both;
+  }
 }
+
+
 // $k : 0;
 @for $i from 1 through 3 {
   .step-of-meal:nth-of-type(#{$i}) .section-title-text  {
-    animation-delay: (900 * 4 * $i - 900 * 3)ms;
+    // animation-delay: (300 * 4 * $i - 300 * 3 + 1000)ms;
+    animation-delay:  #{($i - 1) * $step-of-meal__anim-delay-base}ms;
   }
   @for $j from 1 through 3 {
     .step-of-meal:nth-of-type(#{$i}) .step-of-meal__item:nth-of-type(#{$j})  {
-      animation-delay: (900 * 4 * $i - 900 * 3 + 900 * $j)ms;
+      animation-delay: #{($i - 1) * $step-of-meal__anim-delay-base + $step-of-meal-title__anim-dur + ($j - 1) * $meal__anim-dur}ms;
     }
   }
 }
