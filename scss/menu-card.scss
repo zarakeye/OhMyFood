@@ -21,22 +21,15 @@
     opacity: 1;
   }
 }
-$nb_steps-of-meal: 3;
-$nb_meals_by_step-of-meal: 3;
-$step-of-meal-title__anim-dur: 400;
-$meal__anim-dur: 400;
-$step-of-meal__anim-dur: $step-of-meal-title__anim-dur + $nb_meals_by_step-of-meal * $meal__anim-dur;
-$step-of-meal__anim-end-latency: 1000;
-$step-of-meal__anim-delay-base: $step-of-meal__anim-dur + $step-of-meal__anim-end-latency;
+
+$animDuration: 300ms;
+$intervalBetween2AnimationStarting: 200ms;
 
 body {
   overflow-x: hidden;
-  // animation: fadeIn 2s;
 }
 
 .img-wrapper {
-  // min-width: 370px; 
-  // width: 100vw;
   img {
     height: 275px;
     width: 100%;
@@ -63,11 +56,10 @@ main {
   background-color: $background-color;
   &__title {
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
     background-color: $background-color;
     align-items: baseline;
     width: 100%;
-    // padding-left: 17px;
     padding-right: 17px;
     padding-top: 32px;
     padding-bottom: 40px;
@@ -100,6 +92,7 @@ main {
   background-color: $background-color;
   padding-bottom: 40px;
   flex: 1;
+  counter-increment: nth-step-of-meal;
   .section-title {
     margin-bottom: 12px;
     &-text {
@@ -110,6 +103,7 @@ main {
     height: 19px;
     margin-bottom: 5px;
     opacity: 0;
+    animation: fadeIn_step-of-meal-title #{$animDuration} ease-in-out;
     }
     &-underline {
       background-color: $notication-background-color;
@@ -118,7 +112,6 @@ main {
       height: 3px;
     }
   }
-
   &__list {
     list-style: none;
     font-family: $font-default;
@@ -128,87 +121,33 @@ main {
     align-items: stretch;
     gap: 12px;
   }
-  
-  // $k : 0;
-  // @for $i from 1 through 3 {
-  //   &:nth-of-type(#{$i}) {
-  //     .section-title-text {
-  //       // opacity: 0;
-  //       animation: fadeIn 300ms ease-in-out #{$k}ms;
-  //     }
-  //     $k : $k + 300;
-      
-  //     &__list:nth-of-type(#{$i}) {
-  //       @if $i != 0 {
-  //         // $k : $k + 300;
-  //         @for $j from 1 through 3 {
-  //           .step-of-meal__item:nth-of-type(#{$j}) {
-  //             opacity: 0;
-  //             animation: fadeIn 300ms ease-in-out #{$k}ms;
-  //             animation-fill-mode: both;
-  //             @if $j < 3 {
-  //               $k : $k + 300;
-  //             }
-  //           }
-  //         }
-  //       }
-  //       $k : $k + 300;
-  //       // opacity: 0;
-  //       // animation: fadeIn 1s ease-in-out;
-  //       // animation-fill-mode: both;  
-
-  //     }
-  //   }
-  // }
-  // @for $i from 1 through 3 {
-  //   &:nth-of-type(#{$i}) {
-      
-  //     @if $i != 0 {
-  //       $k : $k + 300;
-  //       @for $j from 1 through 3 {
-  //         .step-of-meal__item:nth-of-type(#{$j}) {
-  //           opacity: 0;
-  //           animation: fadeIn 300ms ease-in-out #{$k}ms;
-  //           animation-fill-mode: both;
-  //           @if $j < 3 {
-  //             $k : $k + 300;
-  //           }
-  //         }
-  //       }
-  //     }
-  //     $k : $k + 300;
-  //     // opacity: 0;
-  //     // animation: fadeIn 1s ease-in-out;
-  //     // animation-fill-mode: both;  
-
-  //   }
-  // }
-
-}
-.step-of-meal {
-  .section-title-text {
-    animation: fadeIn_step-of-meal-title #{$step-of-meal-title__anim-dur}ms ease-in-out;
+  &__item {
+    animation: fadeIn_meal #{$animDuration} ease-in-out;
+  }
+  .section-title-text, &__item {
     animation-fill-mode: both;
-  }
-  .step-of-meal__item {
-    animation: fadeIn_meal #{$meal__anim-dur}ms ease-in-out;
-    animation-fill-mode: both;
+    animation-delay: calc((var(--anim-order) - 1) * $intervalBetween2AnimationStarting);
   }
 }
 
+/* Progressive display of steps of meal and content */
+// $nb_steps-of-meal: 3;
+// $nb_meals_by_step-of-meal: 3;
+// $step-of-meal__anim-dur: $step-of-meal-title__anim-dur + $nb_meals_by_step-of-meal * $meal__anim-dur;
+// $stepOfMealAnimEndLatency: 1000;
+// $step-of-meal__anim-delay-base: $step-of-meal__anim-dur + $step-of-meal__anim-end-latency;
+// $delay: 0;
 
-// $k : 0;
-@for $i from 1 through 3 {
-  .step-of-meal:nth-of-type(#{$i}) .section-title-text  {
-    // animation-delay: (300 * 4 * $i - 300 * 3 + 1000)ms;
-    animation-delay:  #{($i - 1) * $step-of-meal__anim-delay-base}ms;
-  }
-  @for $j from 1 through 3 {
-    .step-of-meal:nth-of-type(#{$i}) .step-of-meal__item:nth-of-type(#{$j})  {
-      animation-delay: #{($i - 1) * $step-of-meal__anim-delay-base + $step-of-meal-title__anim-dur + ($j - 1) * $meal__anim-dur}ms;
-    }
-  }
-}
+// @for $i from 1 through 3 {
+//   .step-of-meal:nth-of-type(#{$i}) .section-title-text  {
+//     animation-delay:  #{($i - 1) * $step-of-meal__anim-delay-base}ms;
+//   }
+//   @for $j from 1 through 3 {
+//     .step-of-meal:nth-of-type(#{$i}) .step-of-meal__item:nth-of-type(#{$j})  {
+//       animation-delay: #{($i - 1) * $step-of-meal__anim-delay-base + $step-of-meal-title__anim-dur + ($j - 1) * $meal__anim-dur}ms;
+//     }
+//   }
+// }
 
 .selector {
   &:checked + .dish {
@@ -304,7 +243,6 @@ main {
   padding-bottom: 40px;
 }
 
-// @media (min-width: 370px) {
 @media (max-width: 416px) {
   .menu {
     form {
@@ -323,43 +261,9 @@ main {
   }
 }
 
-// @media (min-width: 417px) {
-//   .menu {
-//     &__title {
-//       background-color: $background-color;
-//       width: 100%;
-//       padding-left: 0;
-//       padding-right: 0;
-//       justify-content: center;
-//       gap: 24px;
-//     }
-//     .section__title {
-//       padding-left: 17px;
-//       padding-right: 17px;
-//     }
-//     // form {
-//     //   .step-of-meal {
-//     //     padding-left: 50px;
-//     //     padding-right: 50px;
-//     //   }
-//     // }
-//   }
-  
-//   .selector__label {
-//     height: 92px;
-//   }
-// }
 
 @media (min-width: 417px) {
   .menu {
-    // &__title {
-    //   background-color: $background-color;
-    //   width: 100%;
-    //   padding-left: 0;
-    //   padding-right: 0;
-    //   justify-content: center;
-    //   gap: 24px;
-    // }
     form .step-of-meal {
       padding-left: 50px;
       padding-right: 50px;
@@ -376,9 +280,6 @@ main {
       }
     }
   }
-  // .selector__label {
-  //   height: 88px;
-  // }
 }
 
 @media (min-width: $tablet-min-width) {
@@ -386,17 +287,6 @@ main {
     background: $light-theme-background-content-color;
     margin-left: 75px;
     margin-right: 75px;
-  //   &__title {
-  //     background-color: $background-color;
-  //     width: 100%;
-  //     padding-left: 0;
-  //     padding-right: 0;
-  //     justify-content: center;
-  //     gap: 24px;
-  //   }
-  // }
-  // .selector__label {
-  //   height: 69px;
   }
 }
 
