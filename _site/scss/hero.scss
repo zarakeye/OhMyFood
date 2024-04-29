@@ -1,0 +1,28 @@
+@import "utilities/variables";
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: $background-color;
+  font-family: $font-default;
+  padding-top: 39px;
+  padding-bottom: 57px;
+  padding-left: 34px;
+  padding-right: 34px;
+  .section-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 28.13px;
+    margin-bottom: 17px;
+  }
+  &__text {
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 21.09px;
+    margin-bottom: 17px;
+  }
+}

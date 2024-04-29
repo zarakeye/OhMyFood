@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menu - &Agrave; la fran&ccedil;aise</title>
+  <link rel="icon" type="image/ico" href="/assets/images/logo/ohmyfood.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="/assets/css/menu.css">
+</head>
+
+<body>
+  <header>
+    <div class="header">
+      <img class="header__logo" src="/assets/images/logo/ohmyfood@2x.svg" alt="logo cliquable">
+    </div>
+    <a class="header__goback" href="/index.html">
+      <img src="/assets/images/icons/goback.svg" alt="Arrow to go back">
+      <span class="sr-only">Retour</span>
+    </a>
+  </header>
+
+  <div class="img-wrapper">
+    <img src="/assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Assiette gastronomique">
+  </div>
+  <main>
+    <article class="menu">
+      <div class="menu__title">
+        <h1 class="section-title">
+          <span class="sr-only">Menu "</span>
+          &Agrave; la fran&ccedil;aise
+          <span class="sr-only">" pr&eacute;sent&eacute; par ohmyfood</span>
+        </h1>
+        <form class="like-form">
+          <input type="checkbox" id="like_a-la-francaise" name="like_a-la-francaise" class="like_button"
+            value="favorite">
+          <label for="like_a-la-francaise" class="fav-label">
+            <i class="fa-solid fa-heart"></i>
+            <i class="fa-regular fa-heart"></i>
+            <span class="sr-only">Ajouter au favoris</span>
+          </label>
+        </form>
+      </div>
+      <form id="order">
+        <section class="step-of-meal">
+          <div class="section-title">
+            <h2 class="section-title-text" style="--anim-order: 1;">entr&eacute;es</h2>
+            <div class="section-title-underline"></div>
+          </div>
+          <ul class="step-of-meal__list">
+            <li class="step-of-meal__item" style="--anim-order: 2;">
+              <input type="checkbox" id="tartare-poulpe-acidule" class="selector sr-only"
+                value="tartare-poulpe-acidule">
+              <div class="dish">
+                <div class="dish__description">
+                  <div class="dish__section-title">
+                    <h3 class="dish__title">Tartare de poulpe acidul&eacute;</h3>
+                    <p class="dish__info">Aux zestes d'orange</p>
+                  </div>
+                  <p class="dish__price">25€</p>
+                </div>
+                <div class="dish__check">
+                  <span>
+                    <i class="fa-solid fa-check"></i>
+                  </span>
+                </div>
+                <label for="tartare-poulpe-acidule" class="selector__label">Tartare de poulpe acidul&eacute;</label>
+              </div>
+            </li>
+            <li class="step-of-meal__item" style="--anim-order: 3;">
+              <input type="checkbox" id="veloute-legume-d-antan" name="veloute-legume-d-antan" class="selector sr-only"
+                value="veloute-legume-d-antan">
+              <div class="dish">
+                <div class="dish__description">
+                  <div class="dish__section-title">
+                    <h3 class="dish__title">Velouté de l&eacute;gumes d'antan</h3>
+                    <p class="dish__info">Carotte, panais, topinambour</p>
+                  </div>
+                  <p class="dish__price">35€</p>
+                </div>
+                <div class="dish__check">
+                  <span>
+                    <i class="fa-solid fa-check"></i>
+                  </span>
+                </div>
+                <label for="veloute-legume-d-antan" class="selector__label">Velout&eacute; de l&eacute;gumes
+                  d'antan</label>
+              </div>
+            </li>
+            <li class="step-of-meal__item" style="--anim-order: 4;">
+              <input type="checkbox" id='soupe-a-l-oignon' name="soupe-a-l-oignon" class="selector sr-only"
+                value="soupe-a-l-oignon">
+              <div class="dish">
+                <div class="dish__description">
+                  <div class="dish__section-title">
+                    <h3 class="dish__title">Soupe &agrave; l'oignon</h3>
+                    <p class="dish__info">Revisit&eacute;e</p>
+                  </div>
+                  <p class="dish__price">20€</p>
+                </div>
+                <div class="dish__check">
+                  <span>
+                    <i class="fa-solid fa-check"></i>
+                  </span>
+                </div>
+                <label for='soupe-a-l-oignon' class="selector__label">Soupe à l'oignon</label>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section class="step-of-meal">
+          <div class="section-title">
+            <h2 class="section-title-text" style="--anim-order: 5;">plats</h2>
+            <div class="section-title-underline"></div>
+          </div>
+          <ul class="step-of-meal__list">
+            <li class="step-of-meal__item" style="--anim-order: 6;">
+              <input type="checkbox" id="coquilles-saint-jacques" name="coquilles-saint-jacques"
+                class="selector sr-only" value="coquilles-saint-jacques">
+              <div class="dish">
+                <div class="dish__description">
+                  <div class="dish__section-title">
+                    <h3 class="dish__title">Coquilles Saint-Jacques</h3>
+                    <p class="dish__info">Accompagn&eacute; d'une pur&eacute;e de panais</p>
+                  </div>
+                  <p class="dish__price">40€</p>
+                </div>
+                <div class="dish__check">
+                  <span>
+                    <i class="fa-solid fa-check"></i>
+                  </span>
+                </div>
+                <label for="coquilles-saint-jacques" class="selector__label">Coquilles Saint-Jacques</label>
+              </div>
+            </li>
+            <li class="step-of-meal__item" style="--anim-order: 7;">
+              <input type="checkbox" id="magret-de-canard" name="magret-de-canard" class="selector sr-only"
+                value="magret-de-canard">
+              <div class="dish">
+                <div class="dish__description">
+                  <div class="dish__section-title">
+                    <h3 class="dish__title">Magret de canard</h3>
+                    <p class="dish__info">Et parmentier de pommes de terre</p>
+                  </div>
+                  <p class="dish__price">35€</p>
+                </div>
+                <div class="dish__check">
+                  <span>
+                    <i class="fa-solid fa-check"></i>
+                  </span>
+                </div>
+                <label for="magret-de-canard" class="selector__label">Magret de canard</label>
+              </div>
+            </li>
+            <li class="step-of-meal__item" style="--anim-order: 8;">
+              <input type="checkbox" id="pigeonneau-d-ille-et-vilaine" name="pigeonneau-d-ille-et-vilaine"
+                class="selector sr-only" value="pigeonneau-d-ille-et-vilaine">
+              <div class="dish">
+                <div class="dish__description">
+                  <div class="dish__section-title">
+                    <h3 class="dish__title">Pigeonneau d'Ille-et-Vilaine</h3>
+                    <p class="dish__info">Sur son lit de gnocchis aux l&eacute;gumes</p>
+                  </div>
+                  <p class="dish__price">44€</p>
+                </div>
+                <div class="dish__check">
+                  <span>
+                    <i class="fa-solid fa-check"></i>
+                  </span>
+                </div>
+                <label for="pigeonneau-d-ille-et-vilaine" class="selector__label">Pigeonneau d'Ille-et-Vilaine</label>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section class="step-of-meal">
+          <div class="section-title">
+            <h2 class="section-title-text" style="--anim-order: 9;">desserts</h2>
+            <div class="section-title-underline"></div>
+          </div>
+          <ul class="step-of-meal__list">
+            <li class="step-of-meal__item" style="--anim-order: 10;">
+              <input type="checkbox" id="petales-de-violette-glacees" name="petales-de-violette-glacees"
+                class="selector sr-only" value="petales-de-violette-glacees">
+              <div class="dish">
+                <div class="dish__description">
+                  <div class="dish__section-title">
+                    <h3 class="dish__title">P&eacute;tales de violette glac&eacute;s</h3>
+                    <p class="dish__info">Et pur&eacute;e de noisette</p>
+                  </div>
+                  <p class="dish__price">18€</p>
+                </div>
+                <div class="dish__check">
+                  <span>
+                    <i class="fa-solid fa-check"></i>
+                  </span>
+                </div>
+                <label for="petales-de-violette-glacees" class="selector__label">P&eacute;tales de violette
+                  glac&eacute;s</label>
+              </div>
+            </li>
+            <li class="step-of-meal__item" style="--anim-order: 11;">
+              <input type="checkbox" id="fondant-au-chocolat" name="fondant-au-chocolat" class="selector sr-only"
+                value="fondant-au-chocolat">
+              <div class="dish">
+                <div class="dish__description">
+                  <div class="dish__section-title">
+                    <h3 class="dish__title">Fondant au chocolat</h3>
+                    <p class="dish__info">Revisit&eacute;</p>
+                  </div>
+                  <p class="dish__price">22€</p>
+                </div>
+                <div class="dish__check">
+                  <span>
+                    <i class="fa-solid fa-check"></i>
+                  </span>
+                </div>
+                <label for="fondant-au-chocolat" class="selector__label">Fondant au chocolat</label>
+              </div>
+            </li>
+            <li class="step-of-meal__item" style="--anim-order: 12;">
+              <input type="checkbox" id="millefeuille-croustillant" name="millefeuille-croustillant"
+                class="selector sr-only" value="millefeuille-croustillant">
+              <div class="dish">
+                <div class="dish__description">
+                  <div class="dish__section-title">
+                    <h3 class="dish__title">Millefeuille croustillant</h3>
+                    <p class="dish__info">Myrtilles et p&acirc;te d'amande</p>
+                  </div>
+                  <p class="dish__price">23€</p>
+                </div>
+                <div class="dish__check">
+                  <span>
+                    <i class="fa-solid fa-check"></i>
+                  </span>
+                </div>
+                <label for="millefeuille-croustillant" class="selector__label">Millefeuille croustillant</label>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <div class="command">
+          <button type="submit" form="order" class="cta command-btn" value="order">
+            <span class="cta-txt">Commander</span>
+          </button>
+        </div>
+      </form>
+    </article>
+  </main>
+  <footer class="footer">
+    <a href="/index.html" class="footer__title">ohmyfood</a>
+    <div class="footer__links">
+      <a class="footer__links-link" href="#">
+        <i class="fa-solid fa-utensils"></i>
+        <span class="footer__links-link-text">Proposer un restaurant</span>
+      </a>
+      <a class="footer__links-link" href="#">
+        <i class="fa-solid fa-handshake-angle"></i>
+        <span class="footer__links-link-text">Devenir partenaire</span>
+      </a>
+      <a class="footer__links-link" href="#">Mentions l&eacute;gales</a>
+      <a class="footer__links-link" href="mailto:">Contact</a>
+    </div>
+  </footer>
+</body>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menu - Le d&eacute;lice des sens</title>
+  <link rel="icon" type="image/ico" href="/assets/images/logo/ohmyfood.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="/assets/css/menu.css">
+</head>
+
+<body>
+  <header>
+    <div class="header">
+      <img class="header__logo" src="/assets/images/logo/ohmyfood@2x.svg" alt="logo cliquable">
+    </div>
+    <a class="header__goback" href="/index.html">
+      <img src="/assets/images/icons/goback.svg" alt="Arrow to go back">
+      <span class="sr-only">Retour</span>
+    </a>
+  </header>
+
+  <div class="img-wrapper">
+    <img src="/assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+      alt="Assiette gastronomique">
+  </div>
+  <main>
+    <article class="menu">
+      <div class="menu__title">
+        <h1 class="section-title">
+          <span class="sr-only">Menu "</span>
+          Le d&eacute;lice des sens
+          <span class="sr-only">" pr&eacute;sent&eacute; par ohmyfood</span>
+        </h1>
+        <form class="like-form">
+          <input type="checkbox" id="like_delice-des-sens" name="like_delice-des-sens" class="like_button"
+            value="favorite">
+          <label for="like_delice-des-sens" class="fav-label">
+            <i class="fa-solid fa-heart"></i>
+            <i class="fa-regular fa-heart"></i>
+            <span class="sr-only">Ajouter au favoris</span>
+          </label>
+        </form>
+      </div>
+      <form id="order">
+        <section class="step-of-meal">
+          <div class="section-title">
+            <h2 class="section-title-text" style="--anim-order: 1;">entr&eacute;es</h2>
+            <div class="section-title-underline"></div>
+          </div>
+          <ul class="step-of-meal__list">
+            <li class="step-of-meal__item" style="--anim-order: 2;">
+              <input type="checkbox" id='tartare-de-thon' name="tartare-de-thon" class="selector sr-only"
+                value="tartare-de-thon">
+              <div class="dish">
+                <div class="dish__description">
+                  <div class="dish__section-title">
+                    <h3 class="dish__presentation__title">Tartare de thon</h3>
+                    <p class="dish__presentation__info">Assaisonn&eacute; au yuzu</p>
+                  </div>
+                  <p class="dish__price">25€</p>
+                </div>
+                <div class="dish__check">
+                  <span>
+                    <i class="fa-solid fa-check"></i>
+                  </span>
+                </div>
+                <label for="tartare-de-thon" class="selector__label">Tartare de thon</label>
+              </div>
+            </li>
+            <li class="step-of-meal__item" style="--anim-order: 3;">
+              <input type="checkbox" id='bouchee-de-homard-croustillant' name="bouchee-de-homard-croustillant"
+                class="selector sr-only" value="bouchee-de-homard-croustillant">
+              <div class="dish">
+                <div class="dish__description">
+                  <div class="dish__section-title">
+                    <h3 class="dish__title">Bouchée de homard croustillant</h3>
+                    <p class="dish__info">Et sa farandole de petits légumes</p>
+                  </div>
+                  <p class="dish__price">35€</p>
+                </div>
+                <div class="dish__check">
+                  <span>
+                    <i class="fa-solid fa-check"></i>
+                  </span>
+                </div>
+                <label for="bouchee-de-homard-croustillant" class="selector__label">Bouchée de homard
+                  croustillant</label>
+              </div>
+            </li>
+            <li class="step-of-meal__item" style="--anim-order: 4;">
+              <input type="checkbox" id='foi-gras-de-canard-cuit-entier' name="foi-gras-de-canard-cuit-entier"
+                class="selector sr-only" value="foi-gras-de-canard-cuit-entier">
+              <div class="dish">
+                <div class="dish__description">
+                  <div class="dish__section-title">
+                    <h3 class="dish__title">Foi gras de canard cuit entier</h3>
+                    <p class="dish__info">Confiture de figue et pain toasté</p>
+                  </div>
+                  <p class="dish__price">35€</p>
+                </div>
+                <div class="dish__check">
+                  <span>
+                    <i class="fa-solid fa-check"></i>
+                  </span>
+                </div>
+                <label for="foi-gras-de-canard-cuit-entier" class="selector__label">Foi gras de canard cuit
+                  entier</label>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section class="step-of-meal">
+          <div class="section-title">
+            <h2 class="section-title-text" style="--anim-order: 5;">plats</h2>
+            <div class="section-title-underline"></div>
+          </div>
+          <ul class="step-of-meal__list">
+            <li class="step-of-meal__item" style="--anim-order: 6;">
+              <input type="checkbox" id='poulet-roti-aux-herbes-de-provence' name="poulet-roti-aux-herbes-de-provence"
+                class="selector sr-only" value="poulet-roti-aux-herbes-de-provence">
+              <div class="dish">
+                <div class="dish__description">
+                  <div class="dish__section-title">
+                    <h3 class="dish__title">Poulet rôti aux herbes de Provence</h3>
+                    <p class="dish__info">Et sa crème de truffe</p>
+                  </div>
+                  <p class="dish__price">40€</p>
+                </div>
+                <div class="dish__check">
+                  <span>
+                    <i class="fa-solid fa-check"></i>
+                  </span>
+                </div>
+                <label for="poulet-roti-aux-herbes-de-provence" class="selector__label">Poulet rôti aux herbes de
+                  Provence</label>
+              </div>
+            </li>
+            <li class="step-of-meal__item" style="--anim-order: 7;">
+              <input type="checkbox" id='langouste-rotie' name="langouste-rotie" class="selector sr-only"
+                value="langouste-rotie">
+              <div class="dish">
+                <div class="dish__description">
+                  <div class="dish__section-title">
+                    <h3 class="dish__title">Langouste r&ocirc;tie</h3>
+                    <p class="dish__info">Et ses légumes de saison</p>
+                  </div>
+                  <p class="dish__price">35€</p>
+                </div>
+                <div class="dish__check">
+                  <span>
+                    <i class="fa-solid fa-check"></i>
+                  </span>
+                </div>
+                <label for="langouste-rotie" class="selector__label">Langouste r&ocirc;tie</label>
+              </div>
+            </li>
+            <li class="step-of-meal__item" style="--anim-order: 8;">
+              <input type="checkbox" id='cote-de-boeuf' name="cote-de-boeuf" class="selector sr-only"
+                value="cote-de-boeuf">
+              <div class="dish">
+                <div class="dish__description">
+                  <div class="dish__section-title">
+                    <h3 class="dish__title">C&ocirc;te de b&oelig;uf</h3>
+                    <p class="dish__info">Et sa pur&eacute;e de panais</p>
+                  </div>
+                  <p class="dish__price">44€</p>
+                </div>
+                <div class="dish__check">
+                  <span>
+                    <i class="fa-solid fa-check"></i>
+                  </span>
+                </div>
+                <label for="cote-de-boeuf" class="selector__label">C&ocirc;te de b&oelig;uf</label>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section class="step-of-meal">
+          <div class="section-title">
+            <h2 class="section-title-text" style="--anim-order: 9;">desserts</h2>
+            <div class="section-title-underline"></div>
+          </div>
+          <ul class="step-of-meal__list">
+            <li class="step-of-meal__item" style="--anim-order: 10;">
+              <input type="checkbox" id='farandole-de-desserts' name="farandole-de-desserts" class="selector sr-only"
+                value="farandole-de-desserts">
+              <div class="dish">
+                <div class="dish__description">
+                  <div class="dish__section-title">
+                    <h3 class="dish__title">Farandole de desserts</h3>
+                    <p class="dish__info">Du chef</p>
+                  </div>
+                  <p class="dish__price">18€</p>
+                </div>
+                <div class="dish__check">
+                  <span>
+                    <i class="fa-solid fa-check"></i>
+                  </span>
+                </div>
+                <label for="farandole-de-desserts" class="selector__label">Farandole de desserts</label>
+              </div>
+            </li>
+            <li class="step-of-meal__item" style="--anim-order: 11;">
+              <input type="checkbox" id='creme-brulee' name="creme-brulee" class="selector sr-only"
+                value="creme-brulee">
+              <div class="dish">
+                <div class="dish__description">
+                  <div class="dish__section-title">
+                    <h3 class="dish__title">Cr&egrave;me br&ucirc;l&eacute;e</h3>
+                    <p class="dish__info">Revisit&eacute;e</p>
+                  </div>
+                  <p class="dish__price">22€</p>
+                </div>
+                <div class="dish__check">
+                  <span>
+                    <i class="fa-solid fa-check"></i>
+                  </span>
+                </div>
+                <label for="creme-brulee" class="selector__label">Cr&egrave;me br&ucirc;l&eacute;e</label>
+              </div>
+            </li>
+            <li class="step-of-meal__item" style="--anim-order: 12;">
+              <input type="checkbox" id='tiramisu' name="tiramisu" class="selector sr-only" value="tiramisu">
+              <div class="dish">
+                <div class="dish__description">
+                  <div class="dish__section-title">
+                    <h3 class="dish__title">Tiramisu</h3>
+                    <p class="dish__info">À la noisette</p>
+                  </div>
+                  <p class="dish__price">23€</p>
+                </div>
+                <div class="dish__check">
+                  <span>
+                    <i class="fa-solid fa-check"></i>
+                  </span>
+                </div>
+                <label for="tiramisu" class="selector__label">Tiramisu</label>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <div class="command">
+          <button type="submit" form="order" class="cta command-btn">
+            <span class="cta-txt">Commander</span>
+          </button>
+        </div>
+      </form>
+    </article>
+  </main>
+  <footer class="footer">
+    <a href="/index.html" class="footer__title">ohmyfood</a>
+    <div class="footer__links">
+      <a class="footer__links-link" href="#">
+        <i class="fa-solid fa-utensils"></i>
+        <span class="footer__links-link-text">Proposer un restaurant</span>
+      </a>
+      <a class="footer__links-link" href="#">
+        <i class="fa-solid fa-handshake-angle"></i>
+        <span class="footer__links-link-text">Devenir partenaire</span>
+      </a>
+      <a class="footer__links-link" href="#">Mentions l&eacute;gales</a>
+      <a class="footer__links-link" href="mailto:contact@ohmyfood.com">Contact</a>
+    </div>
+  </footer>
+</body>
