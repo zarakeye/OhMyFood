@@ -1,0 +1,40 @@
+/*** Screen size limits ***/
+$mobile-min-width: 370px;
+$tablet-min-width: 767px;
+$desktop-min-width: 1279px;
+
+$dish__check-width: 59px;
+
+/* Fonts */
+$font-title: 'Shrikhand';
+$font-default: 'Roboto';
+/* Fonts Sizes */
+$section-title-font-size: 24px;
+$card-title-font-size: 18px;
+
+/* Sizes */
+$like_form_size: 22px;
+
+/* Margins */
+$like_form_margin_right_and_left: 24px;
+
+/* Font Weights */
+$section-title-font-weight: 400;
+$card-title-font-weight: 700;
+
+/* Colors */
+$artefact-color: #9356DC;
+$artefact-color-2: #7E7E7E;
+$footer-color: #353535;
+$notication-text-color: #008766;
+$cta-text-color: #FFFFFF;
+$footer-text-color: #FFFFFF;
+$light-theme-main-text-color: #000000;
+$light-theme-secondary-text-color: #353535;
+
+/** Background colors **/
+$background-color: #f6f6f6;
+$notication-background-color: #99E2D0;
+$location_background-color: #EAEAEA;
+$light-theme-background-content-color: #FFFFFF;
+$loader-background-color: #000000;
