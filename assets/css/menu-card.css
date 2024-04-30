@@ -55,6 +55,7 @@ main {
 }
 .menu__title {
   display: flex;
+  justify-content: space-between;
   background-color: #f6f6f6;
   align-items: baseline;
   width: 100%;
@@ -68,15 +69,14 @@ main {
   font-size: 28px;
   font-weight: 400;
   height: 27px;
-  width: calc(100% - 70px);
+  width: 95%;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   padding-bottom: 40px;
   padding-left: 17px;
 }
 .menu__title .like-form {
   background-color: #f6f6f6;
+  width: 22px;
   margin-left: 24px;
   margin-right: 24px;
 }

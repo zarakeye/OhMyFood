@@ -56,7 +56,7 @@ main {
   background-color: $background-color;
   &__title {
     display: flex;
-    // justify-content: space-between;
+    justify-content: space-between;
     background-color: $background-color;
     align-items: baseline;
     width: 100%;
@@ -70,15 +70,16 @@ main {
       font-weight: 400;
       // font-style: italic; // Cette propriété semble ne pas être nécessaire pour être au plus proche du rendu de la maquette
       height: 27px;
-      width: calc(100% - ($like_form_size + 2 * $like_form_margin_right_and_left));
+      width: 95%;
       white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      // overflow: hidden;
+      // text-overflow: ellipsis;
       padding-bottom: 40px;
       padding-left: 17px;
     }
     .like-form {
       background-color: $background-color;
+      width: 22px;
       margin-left: 24px;
       margin-right: 24px;
     }
