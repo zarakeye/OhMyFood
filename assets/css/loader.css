@@ -35,7 +35,7 @@
   align-items: center;
   text-align: center;
   background-color: black;
-  animation: hideLoader 7s ease forwards;
+  animation: hideLoader 3s ease forwards;
 }
 .loader__title {
   font-family: shrikhand;

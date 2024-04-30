@@ -1,9 +1,10 @@
 /*** Screen size limits ***/
+/*** Fonts weights ***/
 /* Fonts */
 /* Fonts Sizes */
 /* Sizes */
 /* Margins */
-/* Font Weights */
+/* Selectors Font Weights */
 /* Colors */
 /** Background colors **/
 @keyframes fadeIn_step-of-meal-title {
@@ -88,7 +89,6 @@ main {
   background-color: #f6f6f6;
   padding-bottom: 40px;
   flex: 1;
-  counter-increment: nth-step-of-meal;
 }
 .step-of-meal .section-title {
   margin-bottom: 12px;
@@ -126,7 +126,6 @@ main {
   animation-delay: calc((var(--anim-order) - 1) * 200ms);
 }
 
-/* Progressive display of steps of meal and content */
 .selector:checked + .dish .dish__description .dish__price, .selector:checked + .dish .dish__check, .selector:checked + .dish .dish__price {
   transform: translateX(0);
 }

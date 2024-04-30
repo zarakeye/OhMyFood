@@ -41,7 +41,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: $artefact-color;
+    background-color: $artifact-color;
     color: $footer-text-color;
     font-family: $font-default;
     font-size: 14.18px;
@@ -75,10 +75,10 @@
     width: 18px;
   }
   .fa-mobile-alt, .fa-list-ul {
-    color: $artefact-color-2;
+    color: $artifact-color-2;
   }
   .fa-store {
-    color: $artefact-color;
+    color: $artifact-color;
   }
 }
 

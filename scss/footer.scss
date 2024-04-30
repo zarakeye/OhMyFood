@@ -15,7 +15,7 @@
     font-family: $font-title;
     text-align: left;
     font-size: 18px;
-    font-weight: 400;
+    font-weight: $font-weight-normal;
     width: 139px;
     height: 27px;
     color: $footer-text-color;
@@ -28,12 +28,6 @@
     font-family: $font-default;
     font-size: 16px;
     gap: 7px;
-    // &:first-child, &:nth-child(2) {
-    //   width: 190px;
-    // }
-    // &:nth-child(3), &:last-child {
-    //   width: 130px;
-    // }
     &-link {
       display: flex;
       background-color: transparent;
@@ -50,8 +44,8 @@
         width: 168px;
       }
       .fa-solid {
-        background-clip: text;
         -webkit-background-clip: text;
+        background-clip: text;
         color: $footer-text-color;
         font-size: 11px;
         width: 22px;

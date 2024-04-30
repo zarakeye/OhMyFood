@@ -42,10 +42,10 @@ $interval: 0.2;
   align-items: center;
   text-align: center;
   background-color: black;
-  animation: hideLoader 7s ease forwards;
+  animation: hideLoader 3s ease forwards;
   &__title {
-    font-family: shrikhand;
-    color: white;
+    font-family: $font-title;
+    color: $loader_text_color;
     width: 80%;
     font-size: 48px;
     font-weight: 700;

@@ -1,9 +1,10 @@
 /*** Screen size limits ***/
+/*** Fonts weights ***/
 /* Fonts */
 /* Fonts Sizes */
 /* Sizes */
 /* Margins */
-/* Font Weights */
+/* Selectors Font Weights */
 /* Colors */
 /** Background colors **/
 .footer {
@@ -53,8 +54,8 @@
   width: 168px;
 }
 .footer__links-link .fa-solid {
-  background-clip: text;
   -webkit-background-clip: text;
+  background-clip: text;
   color: #FFFFFF;
   font-size: 11px;
   width: 22px;
