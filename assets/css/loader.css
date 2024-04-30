@@ -1,0 +1,80 @@
+@keyframes hideLoader {
+  0% {
+    z-index: 5;
+    opacity: 1;
+  }
+  70% {
+    z-index: 5;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes loading {
+  0% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(2);
+  }
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+}
+.loader {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: black;
+  animation: hideLoader 7s ease forwards;
+}
+.loader__title {
+  font-family: shrikhand;
+  color: white;
+  width: 80%;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.loader__stagger {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.loader__point {
+  background-color: white;
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  opacity: 0.3;
+  animation-name: loading;
+  animation-duration: 1000ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 6;
+}
+.loader__point:nth-of-type(1) {
+  animation-delay: 0.2s;
+}
+.loader__point:nth-of-type(2) {
+  animation-delay: 0.4s;
+}
+.loader__point:nth-of-type(3) {
+  animation-delay: 0.6s;
+}
+.loader__point:nth-of-type(4) {
+  animation-delay: 0.8s;
+}
+.loader__point:nth-of-type(5) {
+  animation-delay: 1s;
+}/*# sourceMappingURL=loader.css.map */
