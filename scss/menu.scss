@@ -1,4 +1,9 @@
-@import "utilities/variables";
+@font-face {
+  font-family: 'Shrikhand';
+  src: url(../fonts/Shrikhand-Regular.ttf) format('truetype');
+}
+
+@import "variables";
 @import "shared";
 @import "loader";
 @import "header";

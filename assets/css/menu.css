@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "Shrikhand";
+  src: url(../fonts/Shrikhand-Regular.ttf) format("truetype");
+}
 /*** Screen size limits ***/
 /*** Fonts weights ***/
 /* Fonts */
@@ -91,6 +95,15 @@
   color: transparent;
 }
 
+/*** Screen size limits ***/
+/*** Fonts weights ***/
+/* Fonts */
+/* Fonts Sizes */
+/* Sizes */
+/* Margins */
+/* Selectors Font Weights */
+/* Colors */
+/** Background colors **/
 @keyframes hideLoader {
   0% {
     z-index: 5;
@@ -274,10 +287,6 @@
     opacity: 1;
   }
 }
-body {
-  overflow-x: hidden;
-}
-
 .img-wrapper img {
   height: 275px;
   width: 100%;

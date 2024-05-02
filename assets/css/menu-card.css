@@ -26,10 +26,6 @@
     opacity: 1;
   }
 }
-body {
-  overflow-x: hidden;
-}
-
 .img-wrapper img {
   height: 275px;
   width: 100%;

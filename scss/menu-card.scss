@@ -1,4 +1,4 @@
-@import "utilities/variables";
+@import "variables";
 
 
 @keyframes fadeIn_step-of-meal-title {
@@ -24,10 +24,6 @@
 
 $animDuration: 300ms;
 $intervalBetween2AnimationStarting: 200ms;
-
-body {
-  overflow-x: hidden;
-}
 
 .img-wrapper {
   img {

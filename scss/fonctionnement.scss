@@ -1,4 +1,4 @@
-@import "utilities/variables";
+@import "variables";
 
 .fonctionnement {
   background-color: $light-theme-background-content-color;
@@ -11,7 +11,7 @@
     height: 31px;
   }
   &__steps {
-    position:relative;
+    position: relative;
     margin-top: 26px;
     font-family: $font-default;
     font-size: 16px;
