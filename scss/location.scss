@@ -7,7 +7,7 @@
   justify-content: center;
   height: 50px;
   align-items: center;
-  background-color: $location-background-color;
+  background-color: $fifth-color-darken-2;
   margin-bottom: 0px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .25);
   &__btn {
@@ -28,7 +28,7 @@
   &__icon {
     position: absolute;
     background-color: transparent;
-    color: $$fourth-color;
+    color: $fourth-color;
     right: 0px;
     top: 0px;
     width: 12px;

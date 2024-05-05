@@ -46,12 +46,12 @@
     padding-left: 13px;
     padding-right: 25px;
     font-family: $font-default;
-    color: $$fourth-color;
+    color: $fourth-color;
     border-radius: 0 0 15px 15px;
   }
   & a {
     width: calc(100% - 22px);
-    color: $$fourth-color;
+    color: $fourth-color;
   }
   &__title {
     background-color: $fifth-color;
