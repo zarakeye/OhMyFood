@@ -48,11 +48,11 @@ main {
   max-width: 1280px;
   margin-top: -50px;
   border-radius: 40px 40px 0 0;
-  background-color: $background-color;
+  background-color: $fifth-color-darken;
   &__title {
     display: flex;
     justify-content: space-between;
-    background-color: $background-color;
+    background-color: $fifth-color-darken;
     align-items: baseline;
     width: 100%;
     padding-right: 17px;
@@ -62,7 +62,7 @@ main {
     .section-title {
       font-family: $font-title;
       font-size: 28px;
-      font-weight: $section-title-font-weight;
+      font-weight: $font-weight-normal;
       // font-style: italic; // Cette propriété semble ne pas être nécessaire pour être au plus proche du rendu de la maquette
       height: 27px;
       width: 95%;
@@ -71,19 +71,19 @@ main {
       padding-left: 17px;
     }
     .like-form {
-      background-color: $background-color;
-      width: $menu_card_like-form_size;
-      margin-left: $menu_card_like-form_margin_right_and_left;
-      margin-right: $menu_card_like-form_margin_right_and_left;
+      background-color: $fifth-color-darken;
+      width: 22px;
+      margin-left: 24px;
+      margin-right: 24px;
     }
     .fa-heart {
-      background-color: $background-color;
+      background-color: $fifth-color-darken;
     }
   }
 }
 
 .step-of-meal {
-  background-color: $background-color;
+  background-color: $fifth-color-darken;
   padding-bottom: 40px;
   flex: 1;
   .section-title {
@@ -99,7 +99,7 @@ main {
     animation: fadeIn_step-of-meal-title #{$animDuration} ease-in-out;
     }
     &-underline {
-      background-color: $notication-background-color;
+      background-color: $secondary-color;
       bottom: 3px;
       width: 40px;
       height: 3px;
@@ -131,7 +131,7 @@ main {
   }
   &:not(:checked) + .dish {
     .dish__description .dish__price, .dish__check, .dish__price  {
-      transform: translateX($dish__check-width);
+      transform: translateX(59px);
     }
   }
 }
@@ -144,7 +144,7 @@ main {
   flex: 1;
   min-width: 344px;
   overflow: hidden;
-  background-color: $background-color;
+  background-color: $fifth-color-darken;
   font-family: $font-default;
   border-radius: 15px;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
@@ -183,19 +183,19 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: $dish__check-width;
-    background-color: $notication-background-color;
+    width: 59px;
+    background-color: $secondary-color;
     & span {
-      background-color: $light-theme-background-content-color;
-      color: $notication-background-color;
+      background-color: $fifth-color;
+      color: $secondary-color;
       text-align: center;
-      width: $menu-card-check-circle-width;
-      height: $menu-card-check-circle-width;
+      width: 20px;
+      height: 20px;
       border-radius: 50%;
     }
   }
   &__price, &__check {
-    transform: translateX($dish__check-width);
+    transform: translateX(59px);
     transition: transform 175ms linear;
   }
   .selector__label {
@@ -212,7 +212,7 @@ main {
 .command {
   display: flex;
   justify-content: center;
-  background-color: $background-color;
+  background-color: $fifth-color-darken;
   text-align: center;
   padding-bottom: 40px;
 }
@@ -257,7 +257,7 @@ main {
 
 @media (min-width: $tablet-min-width) {
   .menu {
-    background: $light-theme-background-content-color;
+    background: $fifth-color;
     margin-left: 75px;
     margin-right: 75px;
   }
@@ -265,7 +265,7 @@ main {
 
 @media (min-width: $desktop-min-width) {
   .menu {
-    background: $light-theme-background-content-color;
+    background: $fifth-color;
     margin-left: 193px;
     margin-right: 193px;
     form .step-of-meal {

@@ -1,7 +1,7 @@
 @import "variables";
 
 .fonctionnement {
-  background-color: $light-theme-background-content-color;
+  background-color: $fifth-color;
   padding-top: 48px;
   padding-left: 20px;
   padding-right: 20px;
@@ -41,8 +41,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: $artifact-color;
-    color: $footer-text-color;
+    background-color: $main-color;
+    color: $fifth-color;
     font-family: $font-default;
     font-size: 14.18px;
     width: 24px;
@@ -52,7 +52,7 @@
     border-radius: 50%;
   }
   &__content {
-    background-color: $background-color;
+    background-color: $fifth-color-darken;
     display: flex;
     flex: 1;
     height: 100%;
@@ -75,10 +75,10 @@
     width: 18px;
   }
   .fa-mobile-alt, .fa-list-ul {
-    color: $artifact-color-2;
+    color: #7E7E7E;
   }
   .fa-store {
-    color: $artifact-color;
+    color: $main-color;
   }
 }
 
