@@ -38,7 +38,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: black;
+  background-color: #000000;
   animation: hideLoader 3s ease forwards;
 }
 .loader__title {
@@ -57,7 +57,7 @@
   gap: 10px;
 }
 .loader__point {
-  background-color: white;
+  background-color: #FFFFFF;
   width: 5px;
   height: 5px;
   border-radius: 100%;

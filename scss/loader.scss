@@ -40,7 +40,7 @@ $interval: 0.2;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: black;
+  background-color: $fourth-color;
   animation: hideLoader 3s ease forwards;
   &__title {
     font-family: $font-title;
@@ -59,7 +59,7 @@ $interval: 0.2;
   }
 
   &__point {
-    background-color: white;
+    background-color: $fifth-color;
     width: 5px;
     height: 5px;
     border-radius: 100%;
