@@ -23,7 +23,7 @@
   justify-content: center;
   align-items: center;
   font-size: 16px;
-  font-weight: medium;
+  font-weight: 500;
   font-family: "Roboto";
   color: #FFFFFF;
   padding: 13px 18.75px;
@@ -54,6 +54,15 @@
 }
 .like_button:not(:checked) ~ .fav-label .fa-regular {
   display: inline-block;
+}
+.like_button:not(:checked) ~ .fav-label:hover {
+  cursor: pointer;
+}
+.like_button:not(:checked) ~ .fav-label:hover .fa-solid {
+  display: inline-block;
+}
+.like_button:not(:checked) ~ .fav-label:hover .fa-regular {
+  display: none;
 }
 .like_button:checked ~ .fav-label .fa-solid {
   display: inline-block;
